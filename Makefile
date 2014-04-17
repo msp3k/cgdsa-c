@@ -15,6 +15,7 @@ all:
 	-$(RM) -fr ./docs
 	mkdir ./docs
 	doxygen ./doxygen.conf
+	cd docs && cp index.html 00-INDEX.html
 	$(MAKE) check
 
 clean:
