@@ -1,0 +1,4 @@
+*.o
+.*.sw*
+red-black-tree/test-rbtree
+double-linked-list/test-dllist
