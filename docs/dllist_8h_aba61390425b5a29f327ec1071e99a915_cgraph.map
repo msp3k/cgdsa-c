@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$dllist_8c.html#ac909cd064d5ece6e4c4bc37e7ca58889" title="Return the first node in a list." alt="" coords="149,59,227,88"/>
+<area shape="rect" id="node7" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node)" alt="" coords="301,85,403,115"/>
+<area shape="rect" id="node9" href="$dllist_8c.html#a8fb3c168aec3d0c1758b99bda881c225" title="Remove a node from a list." alt="" coords="139,5,237,35"/>
+<area shape="rect" id="node13" href="$dllist_8c.html#ae29f205f942193553d1c882608cecf91" title="Return the number of nodes in the list." alt="" coords="148,163,228,192"/>
+<area shape="rect" id="node5" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="287,19,417,48"/>
+</map>

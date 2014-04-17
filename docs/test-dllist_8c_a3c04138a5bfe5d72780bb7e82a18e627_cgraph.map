@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$test-dllist_8c.html#a2685ee0be285d37254928405d96ce3d9" title="compare" alt="" coords="488,308,560,337"/>
+<area shape="rect" id="node5" href="$dllist_8c.html#ae8b4533de1f7b656a570c276a86d8857" title="Attach a node to the end of a list." alt="" coords="461,361,587,391"/>
+<area shape="rect" id="node9" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node)" alt="" coords="671,667,772,696"/>
+<area shape="rect" id="node11" href="$dllist_8c.html#a70075d0fa7bedd66bab13d323e261718" title="Make a copy of a list." alt="" coords="129,719,215,748"/>
+<area shape="rect" id="node13" href="$dllist_8c.html#abbb109f8231ccd2bf48151549edd5ebc" title="Create a new list." alt="" coords="304,308,395,337"/>
+<area shape="rect" id="node16" href="$dllist_8c.html#a04d84b013583239bb15da0ae064bb121" title="Destroy a list." alt="" coords="300,719,399,748"/>
+<area shape="rect" id="node18" href="$dllist_8c.html#ac909cd064d5ece6e4c4bc37e7ca58889" title="Return the first node in a list." alt="" coords="485,821,563,851"/>
+<area shape="rect" id="node22" href="$dllist_8c.html#a8fb3c168aec3d0c1758b99bda881c225" title="Remove a node from a list." alt="" coords="475,1076,573,1105"/>
+<area shape="rect" id="node26" href="$dllist_8c.html#ae29f205f942193553d1c882608cecf91" title="Return the number of nodes in the list." alt="" coords="484,415,564,444"/>
+<area shape="rect" id="node29" href="$dllist_8c.html#a40700dce4f039f6dcd8614087734d050" title="Return the next node in the list." alt="" coords="309,975,389,1004"/>
+<area shape="rect" id="node32" href="$dllist_8c.html#af4fc94f1eb2784bf301a7b54df454778" title="Create a new node containing value and insert it at the end of the list." alt="" coords="291,615,408,644"/>
+<area shape="rect" id="node34" href="$dllist_8c.html#a0a42fd53a3bbbbaa9d048a7d2cd55c1b" title="Create a new node containing value and insert it before node." alt="" coords="459,1281,589,1311"/>
+<area shape="rect" id="node42" href="$dllist_8c.html#acf250468ccd52e44b16065dafacae6ea" title="Remove a node from the list." alt="" coords="459,563,589,592"/>
+<area shape="rect" id="node46" href="$dllist_8c.html#ac5fd18ec4430ac94de10f775baa00f8d" title="Search for the value in the list." alt="" coords="133,873,211,903"/>
+<area shape="rect" id="node52" href="$dllist_8c.html#ad62a852959e8737f91ec5058ce0f7510" title="A convenience function for the developer." alt="" coords="116,1388,228,1417"/>
+<area shape="rect" id="node54" href="$dllist_8c.html#a1ee369d5fbca30292e42d447a9786f23" title="Create a new node containing value and insert it into the list." alt="" coords="305,1233,393,1263"/>
+<area shape="rect" id="node60" href="$dllist_8c.html#ad3e523c1e07e47daedccb04bddc911a4" title="Create a new node containing value and insert it after node." alt="" coords="289,1129,409,1159"/>
+<area shape="rect" id="node64" href="$dllist_8c.html#a11e6a5dd5d6770c3797d60d7778dacf6" title="Return the last node in the list." alt="" coords="485,255,563,284"/>
+<area shape="rect" id="node69" href="$dllist_8c.html#ac640a2f42cb7985f05c8b3b8f94974a9" title="Return the previous node in the list." alt="" coords="309,1337,389,1367"/>
+<area shape="rect" id="node73" href="$dllist_8c.html#a9e54b57347ffa82362bba1536a0c4d41" title="Create a new node containing value and insert it at the beginning of the list." alt="" coords="113,1077,231,1107"/>
+<area shape="rect" id="node80" href="$dllist_8c.html#aedb65edaf7be04b8579485b13fdf89e7" title="Sort the list using a quicksort algorithm." alt="" coords="133,452,211,481"/>
+<area shape="rect" id="node89" href="$dllist_8c.html#a7551bf4f67b920fd89c378b17f05cffd" title="Return the value from a node." alt="" coords="307,255,392,284"/>
+<area shape="rect" id="node92" href="$dllist_8c.html#af41e3d846edf2681f738cf8961dd557a" title="Discern if two lists are identical." alt="" coords="104,977,240,1007"/>
+<area shape="rect" id="node96" href="$test-dllist_8c.html#a5a9aed2f6d5d9cf85e1a98a84cfc4484" title="dup_int" alt="" coords="140,1441,204,1471"/>
+<area shape="rect" id="node7" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="656,923,787,952"/>
+<area shape="rect" id="node36" href="$dllist_8c.html#aced0fb5e5823163494b7eb30d1dfd24e" title="__dllist_make_new_node" alt="" coords="637,1205,805,1235"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$dllist_8c.html#ae8b4533de1f7b656a570c276a86d8857" title="Attach a node to the end of a list." alt="" coords="283,59,408,88"/>
+<area shape="rect" id="node9" href="$dllist_8c.html#abbb109f8231ccd2bf48151549edd5ebc" title="Create a new list." alt="" coords="137,7,228,36"/>
+<area shape="rect" id="node13" href="$dllist_8c.html#a04d84b013583239bb15da0ae064bb121" title="Destroy a list." alt="" coords="133,165,232,195"/>
+<area shape="rect" id="node15" href="$dllist_8c.html#ac909cd064d5ece6e4c4bc37e7ca58889" title="Return the first node in a list." alt="" coords="307,112,384,141"/>
+<area shape="rect" id="node23" href="$dllist_8c.html#ae29f205f942193553d1c882608cecf91" title="Return the number of nodes in the list." alt="" coords="305,269,385,299"/>
+<area shape="rect" id="node25" href="$dllist_8c.html#acf250468ccd52e44b16065dafacae6ea" title="Remove a node from the list." alt="" coords="280,323,411,352"/>
+<area shape="rect" id="node32" href="$dllist_8c.html#a7551bf4f67b920fd89c378b17f05cffd" title="Return the value from a node." alt="" coords="140,320,225,349"/>
+<area shape="rect" id="node5" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="460,125,591,155"/>
+<area shape="rect" id="node7" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node)" alt="" coords="475,204,576,233"/>
+<area shape="rect" id="node11" href="$test-dllist_8c.html#a2685ee0be285d37254928405d96ce3d9" title="compare" alt="" coords="309,5,381,35"/>
+<area shape="rect" id="node19" href="$dllist_8c.html#a8fb3c168aec3d0c1758b99bda881c225" title="Remove a node from a list." alt="" coords="296,165,395,195"/>
+</map>
