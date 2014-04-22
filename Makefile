@@ -8,6 +8,7 @@ all:
 docs:
 	-$(RM) -f ./mainpage.h
 	echo "/** \mainpage [C]ool and [G]roovy [D]ata [S]tructures and [A]lgorithms in [C]" >> mainpage.h
+	echo " * GitHub Repository: https://github.com/msp3k/cgdsa-c/tree/master" >> mainpage.h
 	for m in $$(find . -type f -name Makefile | grep -v '^\./Makefile'); do \
 		d=$$(dirname "$$m"); \
 		(cd $$d && grep 'mainpagesection' *.h) \
