@@ -3,6 +3,9 @@ all:
 		d=$$(dirname "$$m"); \
 		(cd $$d && $(MAKE)); \
 	done
+	$(MAKE) check
+
+docs:
 	-$(RM) -f ./mainpage.h
 	echo "/** \mainpage [C]ool and [G]roovy [D]ata [S]tructures and [A]lgorithms in [C]" >> mainpage.h
 	for m in $$(find . -type f -name Makefile | grep -v '^\./Makefile'); do \
@@ -15,8 +18,6 @@ all:
 	-$(RM) -fr ./docs
 	mkdir ./docs
 	doxygen ./doxygen.conf
-	cd docs && cp index.html 00-INDEX.html
-	$(MAKE) check
 
 clean:
 	for m in $$(find . -type f -name Makefile | grep -v '^\./Makefile'); do \
@@ -29,6 +30,8 @@ clobber:
 		d=$$(dirname "$$m"); \
 		(cd $$d && $(MAKE) clobber); \
 	done
+	-$(RM) -r docs
+	-$(RM) mainpage.h
 
 check:
 	for m in $$(find . -type f -name Makefile | grep -v '^\./Makefile'); do \
@@ -36,5 +39,6 @@ check:
 		(cd $$d && $(MAKE) check); \
 	done
 	@echo
-	@echo "OK"
+	@echo "OK -- ALL TESTS PASSED"
+	@echo
 
