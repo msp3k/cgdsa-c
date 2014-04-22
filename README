@@ -1,4 +1,7 @@
-See docs/index.html for documentation.
+Documentation can be generated (doxygen required) by typing:
+  make docs
+
+Then see docs/index.html for documentation.
 
 See various test-*.c files for example use.
 
