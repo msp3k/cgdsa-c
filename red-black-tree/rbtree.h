@@ -37,7 +37,6 @@
 /** Red-Black Trees
  *
  * \mainpagesection rbtree_t Red-Black Tree
- * https://github.com/msp3k/cgdsa-c/tree/master/red-black-tree
  *
  */
 
