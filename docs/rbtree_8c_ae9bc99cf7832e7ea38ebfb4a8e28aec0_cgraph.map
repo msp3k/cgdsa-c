@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$rbtree_8c.html#a6a0f5779879b99ae8c31675ac7eb0a1d" title="__rbnode_t_color" alt="" coords="219,5,339,35"/>
-<area shape="rect" id="node5" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="212,59,345,88"/>
-<area shape="rect" id="node9" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="208,112,349,141"/>
-<area shape="rect" id="node12" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="223,165,335,195"/>
-<area shape="rect" id="node7" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="397,85,496,115"/>
-</map>

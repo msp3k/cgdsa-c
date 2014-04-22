@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$dllist_8c.html#ac909cd064d5ece6e4c4bc37e7ca58889" title="Return the first node in a list." alt="" coords="192,59,269,88"/>
-<area shape="rect" id="node9" href="$dllist_8c.html#a40700dce4f039f6dcd8614087734d050" title="Return the next node in the list." alt="" coords="191,5,271,35"/>
-<area shape="rect" id="node5" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="321,5,452,35"/>
-<area shape="rect" id="node7" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node)" alt="" coords="336,59,437,88"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$rbtree_8c.html#aefc27768d332471de2be0e16cdd6a513" title="__rbnode_t_depth" alt="" coords="225,5,351,35"/>
-<area shape="rect" id="node7" href="$rbtree_8c.html#a7ca3edac95bf7b4fe8cbb55938db420f" title="Given a node, return the previous node via reverse in&#45;order traversal." alt="" coords="219,59,357,88"/>
-<area shape="rect" id="node9" href="$rbtree_8c.html#af9946309f06baa026e29a5f692024c23" title="Given a node, return the previous node via reverse post&#45;order traversal." alt="" coords="211,112,365,141"/>
-<area shape="rect" id="node5" href="$rbtree_8c.html#a743c26ab31c9205dfca65d0030b49fb5" title="Return the parent node of a node." alt="" coords="413,5,512,35"/>
-</map>

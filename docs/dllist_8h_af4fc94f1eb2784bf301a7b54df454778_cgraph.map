@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$dllist_8c.html#a0a42fd53a3bbbbaa9d048a7d2cd55c1b" title="Create a new node containing value and insert it before node." alt="" coords="173,5,304,35"/>
-<area shape="rect" id="node7" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node)" alt="" coords="188,59,289,88"/>
-<area shape="rect" id="node5" href="$dllist_8c.html#aced0fb5e5823163494b7eb30d1dfd24e" title="__dllist_make_new_node" alt="" coords="352,5,520,35"/>
-</map>

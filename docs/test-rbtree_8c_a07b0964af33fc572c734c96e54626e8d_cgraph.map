@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$test-rbtree_8c.html#addfea01b85ab2553120e7e6cf7c8d65c" title="cmp" alt="" coords="156,5,201,35"/>
-<area shape="rect" id="node5" href="$rbtree_8c.html#a21781311b2d0ce0203c651b4706ee5e1" title="Create a new tree." alt="" coords="129,59,228,88"/>
-<area shape="rect" id="node9" href="$rbtree_8c.html#a04081812b705be81f807e8afa3eec04c" title="Destroy a tree and free all nodes, keys, and values." alt="" coords="127,112,231,141"/>
-<area shape="rect" id="node13" href="$rbtree_8c.html#a3d44f3c3a531e1a56d12c5ef4e46ddba" title="Return the number of nodes in the tree." alt="" coords="136,165,221,195"/>
-<area shape="rect" id="node15" href="$rbtree_8c.html#a61d16485cc152daf2bf757dc2b4d3d3d" title="Return the root node of a tree." alt="" coords="139,219,219,248"/>
-<area shape="rect" id="node7" href="$test-dllist_8c.html#a2685ee0be285d37254928405d96ce3d9" title="compare" alt="" coords="325,59,397,88"/>
-<area shape="rect" id="node11" href="$rbtree_8c.html#a7bd3073286ce9dce00533e24c8a855be" title="__rbtree_destroy_nodes" alt="" coords="281,112,441,141"/>
-</map>
