@@ -11,9 +11,9 @@ docs:
 	echo " * GitHub Repository: https://github.com/msp3k/cgdsa-c/tree/master" >> mainpage.h
 	for m in $$(find . -type f -name Makefile | grep -v '^\./Makefile'); do \
 		d=$$(dirname "$$m"); \
-		(cd $$d && grep 'mainpagesection' *.h) \
-		| sed 's,mainpagesection,section,g' \
-		>> mainpage.h ; \
+		s=$$(cd $$d && grep 'SECTION: ' *.h | sed 's,^.*SECTION: ,,g'); \
+		echo " * \section $${s}" >> mainpage.h; \
+		echo " * Files: https://github.com/msp3k/cgdsa-c/tree/master/$$d" >> mainpage.h; \
 	done
 	echo " */" >> mainpage.h
 	-$(RM) -fr ./docs

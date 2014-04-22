@@ -34,10 +34,7 @@
 #ifndef __LIST_H__
 #define __LIST_H__
 
-/** Double-Linked Lists
- *
- * \mainpagesection dllist_t Double-Linked List
- *
+/* SECTION: rbtree_t Double-Linked List
  */
 
 //---[ Data Structures ]-----------------------------------------------------

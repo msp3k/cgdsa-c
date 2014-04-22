@@ -34,10 +34,7 @@
 #ifndef __RBTREE_H__
 #define __RBTREE_H__
 
-/** Red-Black Trees
- *
- * \mainpagesection rbtree_t Red-Black Tree
- *
+/* SECTION: dllist_t Red-Black Tree
  */
 
 //---[ Data Structures ]-----------------------------------------------------
