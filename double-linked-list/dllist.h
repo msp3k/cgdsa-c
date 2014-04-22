@@ -36,8 +36,7 @@
 
 /** Double-Linked Lists
  *
- * \mainpagesection dllist_t Double-Linked List
- * <a href="https://github.com/msp3k/cgdsa-c/tree/master/double-linked-list">Take me to the files</a>
+ * \mainpagesection dllist_t Double-Linked List -- https://github.com/msp3k/cgdsa-c/tree/master
  *
  */
 
