@@ -44,7 +44,7 @@
  */
 typedef struct __dllist_t dllist_t;
 
-/* A compare function used for insersion, sort, and find.  This function should
+/** A compare function used for insersion, sort, and find.  This function should
  * compare the two values given as const void * pointers, and return:
  * - if (left < right) return -1
  * - if (left > right) return 1

@@ -52,11 +52,11 @@ typedef struct __rbtree_t rbtree_t;
 
 //---[ Supporting Functions ]------------------------------------------------
 
-/* A compare function used for insersion and find.  This function should
+/** A compare function used for insersion and find.  This function should
  * compare the two keys given as const void * pointers, and return:
- * if (left < right) return -1
- * if (left > right) return 1
- * otherwise return 0
+ * - if (left < right) return -1
+ * - if (left > right) return 1
+ * - otherwise return 0
  */
 typedef int (*rbtree_compare)(const void * left, const void * right);
 
