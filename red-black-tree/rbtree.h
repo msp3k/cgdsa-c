@@ -37,6 +37,7 @@
 /** Red-Black Trees
  *
  * \mainpagesection rbtree_t Red-Black Tree
+ * <a href="https://github.com/msp3k/cgdsa-c/tree/master/red-black-tree">Take me to the files</a>
  *
  */
 
