@@ -203,6 +203,10 @@ rbnode_t * rbtree_detach_node(rbtree_t * t, rbnode_t * n);
  *
  *  n = rbtree_attach_node(t, n);
  *  if (n == NULL) { // Attach failed }
+ *
+ * Notes: Be aware that when inserting a node with a duplicate key, the
+ * original node's key/value pair are removed and replaced with the new
+ * key/value pair.
  */
 rbnode_t * rbtree_attach_node(rbtree_t * t, rbnode_t * n);
 
