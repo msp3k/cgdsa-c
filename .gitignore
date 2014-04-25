@@ -1,4 +1,5 @@
 *.o
 .*.sw*
-red-black-tree/test-rbtree
 double-linked-list/test-dllist
+red-black-tree/test-rbtree
+tree/test-tree
