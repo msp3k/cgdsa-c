@@ -651,12 +651,14 @@ rbnode_t * __rbtree_apply_function(rbnode_t * n, rbtree_func func)
 	return(NULL);
 }
 
-void __rbtree_destroy_nodes(rbnode_t * n)
+void __rbtree_destroy_nodes(rbtree_t * t, rbnode_t * n)
 {
 	if (n == NULL)
 		return;
-	__rbtree_destroy_nodes(n->left);
-	__rbtree_destroy_nodes(n->right);
+	__rbtree_destroy_nodes(t, n->left);
+	__rbtree_destroy_nodes(t, n->right);
+	if (t->free != NULL)
+		t->free(n->key, n->value);
 	free(n);
 }
 
@@ -664,7 +666,7 @@ rbtree_t * rbtree_destroy(rbtree_t * t)
 {
 	if (t == NULL)
 		return(NULL);
-	__rbtree_destroy_nodes(t->root);
+	__rbtree_destroy_nodes(t, t->root);
 	free(t);
 	return(NULL);
 }
