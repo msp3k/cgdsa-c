@@ -1,11 +1,13 @@
-all:
+all::
 	for m in $$(find . -type f -name Makefile | grep -v '^\./Makefile'); do \
 		d=$$(dirname "$$m"); \
 		(cd $$d && $(MAKE)); \
 	done
 	$(MAKE) check
 
-docs:
+all:: mainpage.h
+.PHONY: mainpage.h
+mainpage.h:
 	-$(RM) -f ./mainpage.h
 	echo "/** \mainpage [C]ool and [G]roovy [D]ata [S]tructures and [A]lgorithms in [C]" >> mainpage.h
 	echo " * GitHub Repository: https://github.com/msp3k/cgdsa-c/tree/master" >> mainpage.h
@@ -16,6 +18,8 @@ docs:
 		echo " * Files: https://github.com/msp3k/cgdsa-c/tree/master/$$d" >> mainpage.h; \
 	done
 	echo " */" >> mainpage.h
+
+docs: mainpage.h
 	-$(RM) -fr ./docs
 	mkdir ./docs
 	doxygen ./doxygen.conf
