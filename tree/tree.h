@@ -34,10 +34,7 @@
 #ifndef __TREE_H__
 #define __TREE_H__
 
-/** Trees
- *
- * \mainpagesection tree_t Tree
- *
+/* SECTION: tree_t Tree
  */
 
 //---[ Data Structures ]-----------------------------------------------------
