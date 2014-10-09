@@ -1,0 +1,13 @@
+<map id="__rbtree_insert_case1" name="__rbtree_insert_case1">
+<area shape="rect" id="node2" href="$rbtree_8c.html#a6688c8ec09b44f8c433aa2f6a339e5e2" title="__rbtree_insert_case2" alt="" coords="206,5,357,32"/>
+<area shape="rect" id="node3" href="$rbtree_8c.html#a6a0f5779879b99ae8c31675ac7eb0a1d" title="__rbnode_t_color" alt="" coords="621,5,742,32"/>
+<area shape="rect" id="node4" href="$rbtree_8c.html#a21f411c67e520d7e7b6c266c76884f09" title="__rbtree_insert_case3" alt="" coords="406,56,557,83"/>
+<area shape="rect" id="node5" href="$rbtree_8c.html#ab1821b720529eb37348db1f753597d12" title="__rbtree_uncle" alt="" coords="628,56,735,83"/>
+<area shape="rect" id="node7" href="$rbtree_8c.html#a693af79d681058989c5f3e157e5b1c63" title="__rbtree_grandparent" alt="" coords="1005,157,1149,184"/>
+<area shape="rect" id="node8" href="$rbtree_8c.html#aeddf52771e4ec723cbd70dc13e6cfb55" title="__rbtree_insert_case4" alt="" coords="606,208,757,235"/>
+<area shape="rect" id="node6" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="825,56,938,83"/>
+<area shape="rect" id="node9" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="1010,233,1145,260"/>
+<area shape="rect" id="node11" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="1007,284,1148,311"/>
+<area shape="rect" id="node12" href="$rbtree_8c.html#a76fa5e99a408d6e71082e94ac6d0575f" title="__rbtree_insert_case5" alt="" coords="806,208,957,235"/>
+<area shape="rect" id="node10" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="1197,259,1296,285"/>
+</map>

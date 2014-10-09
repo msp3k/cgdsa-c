@@ -1,0 +1,5 @@
+<map id="dllist_push_front" name="dllist_push_front">
+<area shape="rect" id="node2" href="$dllist_8c.html#ad3e523c1e07e47daedccb04bddc911a4" title="Create a new node containing value and insert it after node. " alt="" coords="171,5,293,32"/>
+<area shape="rect" id="node4" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node) " alt="" coords="181,56,283,83"/>
+<area shape="rect" id="node3" href="$dllist_8c.html#aced0fb5e5823163494b7eb30d1dfd24e" title="__dllist_make_new_node" alt="" coords="341,5,509,32"/>
+</map>

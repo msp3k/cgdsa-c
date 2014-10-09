@@ -1,0 +1,26 @@
+<map id="test_005" name="test_005">
+<area shape="rect" id="node2" href="$test-tree_8c.html#a2685ee0be285d37254928405d96ce3d9" title="compare" alt="" coords="156,31,228,57"/>
+<area shape="rect" id="node3" href="$tree_8c.html#a3663f9a6670b8a308fd6d702928d5c40" title="Create a new tree. " alt="" coords="149,81,235,108"/>
+<area shape="rect" id="node5" href="$tree_8c.html#ac7e292c62d06cd99f393b16368ad39c1" title="Destroy a tree and free all nodes, keys, and values. " alt="" coords="145,132,239,159"/>
+<area shape="rect" id="node7" href="$tree_8c.html#aa8129049863e5cfaf8c540afcdad9a07" title="Create a new node with the given key/value pair, and insert it into the tree. " alt="" coords="151,183,233,209"/>
+<area shape="rect" id="node10" href="$tree_8c.html#a81ddd7569933e6361f88a82c1ca6ca47" title="Determine if the tree is balanced, meaning that the depth of the left and right subtrees under the to..." alt="" coords="132,360,252,387"/>
+<area shape="rect" id="node14" href="$tree_8c.html#a9e7ed018a252063a9817bf02bea42444" title="Return the maximum depth of the tree. " alt="" coords="325,512,440,539"/>
+<area shape="rect" id="node18" href="$tree_8c.html#abcce15f781e3ab72ad43fe6c0a9744f5" title="Determine if the tree is complete, meaning that the tree is full down to the bottom level..." alt="" coords="131,411,253,437"/>
+<area shape="rect" id="node19" href="$tree_8c.html#a9a2203c1a4a10c92cae60d7b4cf7757b" title="Return the root node of a tree. " alt="" coords="348,563,417,589"/>
+<area shape="rect" id="node21" href="$tree_8c.html#a373490f99cfd31132910454cbc46302a" title="Determine if the tree is degenerate, meaning that each parent node has only one child node..." alt="" coords="126,512,258,539"/>
+<area shape="rect" id="node22" href="$tree_8c.html#a63395089d52bf9db2767cc7ff01c8892" title="Return the number of nodes in the tree. " alt="" coords="345,613,420,640"/>
+<area shape="rect" id="node23" href="$tree_8c.html#a5dd8a9d52a7bc7569db295cb7b9ca7e4" title="Determine if the tree is full, meaning that all nodes have either two children, or no children..." alt="" coords="149,259,235,285"/>
+<area shape="rect" id="node24" href="$tree_8c.html#a4edb0c40c59c91b85d60030360320d44" title="Return the minimum depth of the tree. " alt="" coords="137,664,247,691"/>
+<area shape="rect" id="node4" href="$test-dllist_8c.html#a2685ee0be285d37254928405d96ce3d9" title="compare" alt="" coords="347,5,419,32"/>
+<area shape="rect" id="node6" href="$tree_8c.html#ab0f7d7c65abb9acf2ad7df37205f66ac" title="__tree_destroy_nodes" alt="" coords="307,56,458,83"/>
+<area shape="rect" id="node8" href="$tree_8c.html#a229ac4f2bf538b6f8666744730466f74" title="__tree_new_node" alt="" coords="321,107,445,133"/>
+<area shape="rect" id="node9" href="$tree_8c.html#ad27464757d664bf85e6a1a896fc80249" title="Attach a node to the tree. " alt="" coords="321,157,444,184"/>
+<area shape="rect" id="node11" href="$tree_8c.html#a51ee341f10ee082e3f284fd8dd8671e1" title="Given a tree, return the first node for in&#45;order traversal. " alt="" coords="319,208,446,235"/>
+<area shape="rect" id="node12" href="$tree_8c.html#a0fcf60a4afae9c23eae7d52efacf61fc" title="Given a node, return the next node via in&#45;order traversal. " alt="" coords="318,259,447,285"/>
+<area shape="rect" id="node13" href="$tree_8c.html#a1dd94f588dfd1de91345cccf5ea4f9b3" title="__tree_is_leaf" alt="" coords="331,309,434,336"/>
+<area shape="rect" id="node16" href="$tree_8c.html#a037394df5886606b8237e8c51c2cc4e9" title="Return the left child of a node. " alt="" coords="348,360,417,387"/>
+<area shape="rect" id="node17" href="$tree_8c.html#a9f0bb79a3ea0b3a09e9fa82dfbcab72b" title="Return the right child of a node. " alt="" coords="345,411,421,437"/>
+<area shape="rect" id="node15" href="$tree_8c.html#ab26b400d65b129a20a971dd069a7a9d9" title="__tree_max_depth" alt="" coords="507,512,637,539"/>
+<area shape="rect" id="node20" href="$tree_8c.html#a3e9d7255368e98ce64096261f4b89ef0" title="Return the parent node of a node. " alt="" coords="339,461,426,488"/>
+<area shape="rect" id="node25" href="$tree_8c.html#a3f5fcea8497e36516ffd5c7dfd4deff5" title="__tree_min_depth" alt="" coords="320,664,445,691"/>
+</map>

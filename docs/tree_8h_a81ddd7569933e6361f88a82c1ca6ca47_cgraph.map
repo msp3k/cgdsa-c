@@ -1,0 +1,9 @@
+<map id="tree_is_balanced" name="tree_is_balanced">
+<area shape="rect" id="node2" href="$tree_8c.html#a1dd94f588dfd1de91345cccf5ea4f9b3" title="__tree_is_leaf" alt="" coords="187,5,290,32"/>
+<area shape="rect" id="node3" href="$tree_8c.html#a51ee341f10ee082e3f284fd8dd8671e1" title="Given a tree, return the first node for in&#45;order traversal. " alt="" coords="175,56,302,83"/>
+<area shape="rect" id="node4" href="$tree_8c.html#a0fcf60a4afae9c23eae7d52efacf61fc" title="Given a node, return the next node via in&#45;order traversal. " alt="" coords="174,107,303,133"/>
+<area shape="rect" id="node5" href="$tree_8c.html#a037394df5886606b8237e8c51c2cc4e9" title="Return the left child of a node. " alt="" coords="204,157,273,184"/>
+<area shape="rect" id="node6" href="$tree_8c.html#a9e7ed018a252063a9817bf02bea42444" title="Return the maximum depth of the tree. " alt="" coords="181,208,296,235"/>
+<area shape="rect" id="node8" href="$tree_8c.html#a9f0bb79a3ea0b3a09e9fa82dfbcab72b" title="Return the right child of a node. " alt="" coords="201,259,277,285"/>
+<area shape="rect" id="node7" href="$tree_8c.html#ab26b400d65b129a20a971dd069a7a9d9" title="__tree_max_depth" alt="" coords="353,208,482,235"/>
+</map>

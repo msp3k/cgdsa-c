@@ -1,0 +1,51 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$dllist_8c.html#a04d84b013583239bb15da0ae064bb121" title="Destroy a list. " alt="" coords="319,257,417,284"/>
+<area shape="rect" id="node3" href="$dllist_8c.html#ac909cd064d5ece6e4c4bc37e7ca58889" title="Return the first node in a list. " alt="" coords="503,359,582,385"/>
+<area shape="rect" id="node7" href="$dllist_8c.html#ae29f205f942193553d1c882608cecf91" title="Return the number of nodes in the list. " alt="" coords="503,207,583,233"/>
+<area shape="rect" id="node8" href="$dllist_8c.html#a40700dce4f039f6dcd8614087734d050" title="Return the next node in the list. " alt="" coords="327,156,409,183"/>
+<area shape="rect" id="node9" href="$dllist_8c.html#a7551bf4f67b920fd89c378b17f05cffd" title="Return the value from a node. " alt="" coords="325,359,411,385"/>
+<area shape="rect" id="node10" href="$str_8c.html#ac98dbcd66162ef11e32125b6577ead3e" title="Append one string to the end of another. " alt="" coords="325,1321,411,1348"/>
+<area shape="rect" id="node13" href="$str_8c.html#a03d2ad58bdd1f95c6559579ffe3cbfdf" title="Insert one string into another. " alt="" coords="505,1271,581,1297"/>
+<area shape="rect" id="node14" href="$str_8c.html#a6dd5602ddc3c1c3ba6f9e673662bb4be" title="Create a new string. " alt="" coords="683,675,763,701"/>
+<area shape="rect" id="node15" href="$str_8c.html#a4f3cc055252f6f6c27072f902f631c32" title="Return the length of the string. " alt="" coords="871,1195,932,1221"/>
+<area shape="rect" id="node16" href="$str_8c.html#a41ea64748c0af6a12cd646aa9d9277cc" title="Increase the capacity of a string to at least size bytes. " alt="" coords="858,675,945,701"/>
+<area shape="rect" id="node23" href="$str_8c.html#aa8f9e0bd9b74926164cc6e7a515a71dc" title="Assign a value to a string. " alt="" coords="681,1017,764,1044"/>
+<area shape="rect" id="node24" href="$str_8c.html#abb6b17c42995c650314fbab3c6085f74" title="Return the number of bytes that the string can hold, including the terminating &#39;\0&#39;. " alt="" coords="855,159,948,185"/>
+<area shape="rect" id="node26" href="$str_8c.html#aff0f934db06edb321ca02e98d258266c" title="Compare two strings, ignore case. " alt="" coords="105,713,258,740"/>
+<area shape="rect" id="node27" href="$str_8c.html#abb290f2d20ab40bc556690213cac4c1a" title="Perform a forward search for string needle in string haystack, ignore case. " alt="" coords="481,1220,605,1247"/>
+<area shape="rect" id="node28" href="$str_8c.html#a1700862714f70f9437eb4ea3054ed991" title="Perform a reverse search for string needle in string haystack, ignore case. " alt="" coords="659,1676,787,1703"/>
+<area shape="rect" id="node29" href="$str_8c.html#a5ad5bedfe8c6fe8288f72a4bcb380a3f" title="Clear the contents of a string. " alt="" coords="145,865,217,892"/>
+<area shape="rect" id="node30" href="$str_8c.html#ab1c643f6e905f48894c97f6ceed07d77" title="Compare two strings. " alt="" coords="134,916,229,943"/>
+<area shape="rect" id="node31" href="$str_8c.html#a9822ea56efa9252e41a7b856da329962" title="Destroy a string, freeing it&#39;s memory. " alt="" coords="679,55,766,81"/>
+<area shape="rect" id="node33" href="$str_8c.html#af824c620d72571d2250319ad72a76944" title="Erase characters from a string. " alt="" coords="505,1625,581,1652"/>
+<area shape="rect" id="node34" href="$str_8c.html#a4a5350d2079d47891ea90bffd1f7dd4a" title="Perform a forward search for string needle in string haystack. " alt="" coords="690,1423,755,1449"/>
+<area shape="rect" id="node35" href="$str_8c.html#a6abcb78dad57b2c22872aee461e41b72" title="Perform a forward search of haystack for any character in needles. " alt="" coords="319,1119,417,1145"/>
+<area shape="rect" id="node36" href="$str_8c.html#ad7493fb7582a7a1cbe007b0b0d92300f" title="Perform a forward search of haystack for any character not in needles. " alt="" coords="307,1068,429,1095"/>
+<area shape="rect" id="node37" href="$str_8c.html#a1e7a67f859f19dee8eb7db4331f0463d" title="Read input from a stream into a string. " alt="" coords="140,1321,223,1348"/>
+<area shape="rect" id="node38" href="$str_8c.html#ad9f65521c84b39382ce9ab60a3dc2ec6" title="Join a list of strings together. " alt="" coords="149,448,213,475"/>
+<area shape="rect" id="node39" href="$str_8c.html#ad3265c0f8d22aadc5fea273602605bd8" title="Prepend one string to the beginning of another. " alt="" coords="323,1423,413,1449"/>
+<area shape="rect" id="node40" href="$str_8c.html#a1af76d383ff1212d020f7de48c9700bc" title="Replace characters in one string with the contents of another. " alt="" coords="325,1561,411,1588"/>
+<area shape="rect" id="node41" href="$str_8c.html#aa9ef3a4bbadbd6267365d34ad154f046" title="Perform a reverse search for string needle in string haystack. " alt="" coords="688,967,757,993"/>
+<area shape="rect" id="node42" href="$str_8c.html#a71e009f7ea16e6ca7a9049e2979699c9" title="Perform a reverse search of haystack for any chacter in needles. " alt="" coords="851,1777,952,1804"/>
+<area shape="rect" id="node43" href="$str_8c.html#ac99f166f254bbf85d3966fdd2685f149" title="Perform a forward search of haystack for any character not in needles. " alt="" coords="838,1828,965,1855"/>
+<area shape="rect" id="node44" href="$str_8c.html#a6155c06b74cb726ed8a9ef0d78c3fd0c" title="Shrink a string&#39;s capacity. " alt="" coords="478,460,607,487"/>
+<area shape="rect" id="node45" href="$str_8c.html#a196e7645b38dff7845633b7c9f91022c" title="Split a string into a list. " alt="" coords="147,764,215,791"/>
+<area shape="rect" id="node49" href="$str_8c.html#a9fa3cea61b784bfd3c52d9ed8168a9aa" title="Create and return a new string containing a substring of src. " alt="" coords="503,561,583,588"/>
+<area shape="rect" id="node50" href="$str_8c.html#a0409b5659afba3ddafca9242e76bba01" title="Swap the contents of two strings. " alt="" coords="505,967,580,993"/>
+<area shape="rect" id="node5" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node) " alt="" coords="672,359,773,385"/>
+<area shape="rect" id="node6" href="$dllist_8c.html#a8fb3c168aec3d0c1758b99bda881c225" title="Remove a node from a list. " alt="" coords="493,257,592,284"/>
+<area shape="rect" id="node4" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="657,257,789,284"/>
+<area shape="rect" id="node11" href="$mem_8c.html#a06e174ecf0aa38670f28690485773480" title="Return the beginning of the ptr&#39;s chunk of memory, if found. " alt="" coords="1017,1473,1106,1500"/>
+<area shape="rect" id="node12" href="$mem_8c.html#ae6e1f337e0a7a3bf7e25819d7d21487f" title="mf__mem_begin" alt="" coords="1649,675,1767,701"/>
+<area shape="rect" id="node17" href="$mem_8c.html#adb149ef1142d7e953e664a9eaf1f19c7" title="Return an pointer to the end of ptr&#39;s chunk of memory. " alt="" coords="1181,523,1259,549"/>
+<area shape="rect" id="node19" href="$mem_8c.html#a5f27a409c8a3e15b2288de524163687b" title="(Re)allocate size bytes of memory " alt="" coords="1013,675,1109,701"/>
+<area shape="rect" id="node18" href="$mem_8c.html#a666ff077e6effaadfbfc31ed682d2e05" title="mf__mem_end" alt="" coords="1331,523,1439,549"/>
+<area shape="rect" id="node20" href="$mem_8c.html#a27305774bbaf4958b306b801ec4a3c1e" title="mf__mem_realloc" alt="" coords="1157,675,1283,701"/>
+<area shape="rect" id="node21" href="$mem_8c.html#a52657cebbdef516dfcc5ad4fa895e935" title="mf__mem_free" alt="" coords="1331,624,1440,651"/>
+<area shape="rect" id="node22" href="$mem_8c.html#a6a1080cd7b39e1706e19c16b03af1cfa" title="mf__mem_size" alt="" coords="1489,675,1599,701"/>
+<area shape="rect" id="node25" href="$mem_8c.html#aa63bfeac542f0a05caacd0bfba0b39d0" title="Return the number of bytes allocated for ptr. " alt="" coords="1020,251,1103,277"/>
+<area shape="rect" id="node32" href="$mem_8c.html#a42a80c8beade8ea62037149fe5ee3d3b" title="Release memory allocated to ptr. " alt="" coords="1180,624,1260,651"/>
+<area shape="rect" id="node46" href="$dllist_8c.html#abbb109f8231ccd2bf48151549edd5ebc" title="Create a new list. " alt="" coords="322,815,414,841"/>
+<area shape="rect" id="node47" href="$dllist_8c.html#ad62a852959e8737f91ec5058ce0f7510" title="A convenience function for the developer. " alt="" coords="311,865,425,892"/>
+<area shape="rect" id="node48" href="$dllist_8c.html#af4fc94f1eb2784bf301a7b54df454778" title="Create a new node containing value and insert it at the end of the list. " alt="" coords="483,409,602,436"/>
+</map>
