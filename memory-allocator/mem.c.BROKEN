@@ -1,0 +1,192 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#ifdef WITH_PTHREAD
+#include <pthread.h>
+#endif
+
+#include "mem.h"
+#include "rbtree.h"
+
+rbtree_t * __mem_map = NULL;
+unsigned long long __mem_total = 0;
+#ifdef WITH_PTHREAD
+pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+
+#define LOCK pthread_mutex_lock(&lock)
+#define UNLOCK pthread_mutex_unlock(&lock)
+#else
+#define LOCK
+#define UNLOCK
+#endif
+
+int __mem_compare(const void * a1, const void * a2)
+{
+	if (a1 < a2) return(-1);
+	if (a1 > a2) return(1);
+	return(0);
+}
+
+int __mem_init(void)
+{
+	if (__mem_map == NULL) {
+		LOCK;
+		__mem_map = rbtree_create(__mem_compare, NULL);
+		UNLOCK;
+		if (__mem_map == NULL) {
+			return(0);
+		}
+	}
+	return(1);
+}
+
+void * mem_alloc(size_t size)
+{
+	void * start = NULL;
+
+	if (!__mem_init()) return(NULL);
+
+	start = malloc(size);
+	if (start == NULL) {
+		perror("malloc()");
+		return(NULL);
+	}
+	LOCK;
+	__mem_total += size;
+	UNLOCK;
+
+	LOCK;
+	if (!rbtree_insert(__mem_map, start, start + size)) {
+		UNLOCK;
+		free(start);
+		return(NULL);
+	}
+	UNLOCK;
+
+	return(start);
+}
+
+void * mem_begin(void * ptr)
+{
+	rbnode_t * n = NULL;
+	void * b = NULL;
+	void * e = NULL;
+
+	if (!__mem_init()) return(NULL);
+
+	LOCK;
+	n = rbtree_top(__mem_map);
+	UNLOCK;
+	while (n != NULL) {
+		b = rbtree_key(n);
+		e = rbtree_value(n);
+		if (ptr >= b && ptr <= e) {
+			return(b);
+		}
+		if (ptr > e)
+			n = rbtree_right(n);
+		else
+			n = rbtree_left(n);
+	}
+	return(NULL);
+}
+
+void * mem_end(void * ptr)
+{
+	rbnode_t * n = NULL;
+
+	if (!__mem_init()) return(NULL);
+
+	ptr = mem_begin(ptr);
+	LOCK;
+	n = rbtree_find(__mem_map, ptr);
+	UNLOCK;
+	if (n == NULL) return(NULL);
+	return(rbtree_value(n));
+}
+
+void * mem_realloc(void * ptr, size_t size)
+{
+	void * start = NULL;
+	size_t msize = 0;
+
+	if (!__mem_init()) return(NULL);
+
+	if (size == 0) return(mem_free(ptr));
+
+	msize = mem_size(ptr);
+	LOCK;
+	__mem_total -= msize;
+	UNLOCK;
+	ptr = mem_begin(ptr);
+	start = realloc(ptr, size);
+	if (start == NULL) {
+		perror("realloc()");
+		return(NULL);
+	}
+	LOCK;
+	__mem_total += size;
+	UNLOCK;
+
+	LOCK;
+	if (!rbtree_insert(__mem_map, start, start+size)) {
+		UNLOCK;
+		free(start);
+		return(NULL);
+	}
+	UNLOCK;
+
+	return(start);
+}
+
+size_t mem_size(void * ptr)
+{
+	rbnode_t * n = NULL;
+	size_t size = 0;
+
+	if (!__mem_init()) return(0);
+
+	ptr = mem_begin(ptr);
+	LOCK;
+	n = rbtree_find(__mem_map, ptr);
+	UNLOCK;
+	if (n == NULL) {
+		return(0);
+	}
+	LOCK;
+	size = rbtree_value(n) - ptr;
+	UNLOCK;
+	return(size);
+}
+
+void * mem_free(void * ptr)
+{
+	rbnode_t * n = NULL;
+	void * ptr_begin = mem_begin(ptr);
+	size_t size = 0;
+
+	if (!__mem_init()) return(NULL);
+
+	if (ptr_begin != NULL)
+		ptr = ptr_begin;
+	size = mem_size(ptr);
+	LOCK;
+	__mem_total -= size;
+	n = rbtree_find(__mem_map, ptr);
+	if (n != NULL) {
+		assert(rbtree_remove(__mem_map, n));
+	}
+	UNLOCK;
+	free(ptr);
+	return(NULL);
+}
+
+unsigned long long mem_total(void)
+{
+	unsigned long long total = 0;
+
+	LOCK;
+	total = __mem_total;
+	UNLOCK;
+	return(total);
+}
