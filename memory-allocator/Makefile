@@ -33,7 +33,7 @@ all:: test-mem-pthread
 clobber::
 	$(RM) test-mem
 	$(RM) test-mem-pthread
-check:: test-mem
+check:: test-mem test-mem-pthread
 	./test-mem
 	./test-mem-pthread
 
