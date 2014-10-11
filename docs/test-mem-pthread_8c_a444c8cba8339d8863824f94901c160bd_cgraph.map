@@ -20,7 +20,7 @@
 <area shape="rect" id="node17" href="$rbtree_8c.html#a76fa5e99a408d6e71082e94ac6d0575f" title="__rbtree_insert_case5" alt="" coords="1791,107,1942,133"/>
 <area shape="rect" id="node18" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="1997,309,2131,336"/>
 <area shape="rect" id="node20" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="1993,183,2135,209"/>
-<area shape="rect" id="node19" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="2184,309,2283,336"/>
+<area shape="rect" id="node19" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="2185,309,2338,336"/>
 <area shape="rect" id="node22" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="2007,537,2121,564"/>
 <area shape="rect" id="node24" href="$mem_8c.html#ae6e1f337e0a7a3bf7e25819d7d21487f" title="mf__mem_begin" alt="" coords="587,1323,706,1349"/>
 <area shape="rect" id="node25" href="$rbtree_8c.html#a07ee62245ed2dfceed2c3dfb6a2b9304" title="Return the key from a node. " alt="" coords="805,1411,888,1437"/>

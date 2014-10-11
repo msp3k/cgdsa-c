@@ -25,7 +25,7 @@
 <area shape="rect" id="node24" href="$rbtree_8c.html#a6ece394bfd68ff742a27343c0f87e812" title="Detach the given node from the tree. " alt="" coords="1032,1069,1168,1096"/>
 <area shape="rect" id="node25" href="$rbtree_8c.html#a6a0f5779879b99ae8c31675ac7eb0a1d" title="__rbnode_t_color" alt="" coords="2457,791,2578,817"/>
 <area shape="rect" id="node26" href="$rbtree_8c.html#abcd5a0c6b013c882c9aa9dc512c8ddc2" title="__rbtree_delete_case1" alt="" coords="1223,917,1377,944"/>
-<area shape="rect" id="node33" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="2637,309,2736,336"/>
+<area shape="rect" id="node33" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="2638,309,2791,336"/>
 <area shape="rect" id="node36" href="$rbtree_8c.html#acc37d1f06fef3616bed538c92a951f8f" title="__rbtree_maximum_node" alt="" coords="1216,1120,1384,1147"/>
 <area shape="rect" id="node27" href="$rbtree_8c.html#aedfaf48ab188e8a100e9b7b02bee1684" title="__rbtree_delete_case2" alt="" coords="1433,867,1586,893"/>
 <area shape="rect" id="node28" href="$rbtree_8c.html#ae86a40471768717a2f1fab09fde4a395" title="__rbtree_delete_case3" alt="" coords="1635,867,1789,893"/>

@@ -6,7 +6,7 @@
 <area shape="rect" id="node4" href="$rbtree_8c.html#aedfaf48ab188e8a100e9b7b02bee1684" title="__rbtree_delete_case2" alt="" coords="614,208,767,235"/>
 <area shape="rect" id="node5" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="819,107,954,133"/>
 <area shape="rect" id="node7" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="816,157,957,184"/>
-<area shape="rect" id="node6" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="1005,132,1104,159"/>
+<area shape="rect" id="node6" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="1006,132,1159,159"/>
 <area shape="rect" id="node10" href="$rbtree_8c.html#a2bc978ec801f110f70fbb8d48359eb55" title="__rbtree_delete_case5" alt="" coords="411,119,565,145"/>
 <area shape="rect" id="node11" href="$rbtree_8c.html#ae9bc99cf7832e7ea38ebfb4a8e28aec0" title="__rbtree_delete_case6" alt="" coords="614,107,767,133"/>
 </map>

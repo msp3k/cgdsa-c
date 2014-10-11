@@ -1,7 +1,7 @@
 <map id="rbtree_detach_node" name="rbtree_detach_node">
 <area shape="rect" id="node2" href="$rbtree_8c.html#a6a0f5779879b99ae8c31675ac7eb0a1d" title="__rbnode_t_color" alt="" coords="1429,220,1550,247"/>
 <area shape="rect" id="node3" href="$rbtree_8c.html#abcd5a0c6b013c882c9aa9dc512c8ddc2" title="__rbtree_delete_case1" alt="" coords="197,309,350,336"/>
-<area shape="rect" id="node10" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="1608,347,1707,373"/>
+<area shape="rect" id="node10" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="1609,347,1762,373"/>
 <area shape="rect" id="node13" href="$rbtree_8c.html#acc37d1f06fef3616bed538c92a951f8f" title="__rbtree_maximum_node" alt="" coords="189,360,357,387"/>
 <area shape="rect" id="node4" href="$rbtree_8c.html#aedfaf48ab188e8a100e9b7b02bee1684" title="__rbtree_delete_case2" alt="" coords="406,411,559,437"/>
 <area shape="rect" id="node5" href="$rbtree_8c.html#ae86a40471768717a2f1fab09fde4a395" title="__rbtree_delete_case3" alt="" coords="609,524,762,551"/>

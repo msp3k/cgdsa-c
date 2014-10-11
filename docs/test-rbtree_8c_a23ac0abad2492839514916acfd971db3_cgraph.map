@@ -31,7 +31,7 @@
 <area shape="rect" id="node26" href="$rbtree_8c.html#a76fa5e99a408d6e71082e94ac6d0575f" title="__rbtree_insert_case5" alt="" coords="2130,1005,2281,1032"/>
 <area shape="rect" id="node27" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="2335,752,2470,779"/>
 <area shape="rect" id="node29" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="2332,853,2473,880"/>
-<area shape="rect" id="node28" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="2523,752,2621,779"/>
+<area shape="rect" id="node28" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="2523,752,2677,779"/>
 <area shape="rect" id="node31" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="2346,271,2459,297"/>
 <area shape="rect" id="node36" href="$rbtree_8c.html#a6ece394bfd68ff742a27343c0f87e812" title="Detach the given node from the tree. " alt="" coords="904,220,1040,247"/>
 <area shape="rect" id="node37" href="$rbtree_8c.html#abcd5a0c6b013c882c9aa9dc512c8ddc2" title="__rbtree_delete_case1" alt="" coords="1109,220,1262,247"/>

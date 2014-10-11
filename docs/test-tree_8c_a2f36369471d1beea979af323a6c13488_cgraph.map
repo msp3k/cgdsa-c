@@ -24,5 +24,5 @@
 <area shape="rect" id="node21" href="$tree_8c.html#ab0f7d7c65abb9acf2ad7df37205f66ac" title="__tree_destroy_nodes" alt="" coords="510,512,661,539"/>
 <area shape="rect" id="node24" href="$tree_8c.html#ac88131aada7ad9cbf9b29604d158a3ce" title="Detach the given node from the tree. " alt="" coords="331,613,456,640"/>
 <area shape="rect" id="node25" href="$tree_8c.html#a2631fd1b210e9807db2564e197f93975" title="__tree_maximum_node" alt="" coords="507,588,664,615"/>
-<area shape="rect" id="node26" href="$tree_8c.html#ae1c41019d236c44daf4669c31c11bff5" title="replace_node" alt="" coords="536,639,635,665"/>
+<area shape="rect" id="node26" href="$tree_8c.html#a5e212039a8041037897fd6c067c3fa62" title="__tree_replace_node" alt="" coords="514,639,657,665"/>
 </map>

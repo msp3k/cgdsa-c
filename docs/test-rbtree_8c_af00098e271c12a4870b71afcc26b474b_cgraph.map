@@ -26,7 +26,7 @@
 <area shape="rect" id="node20" href="$rbtree_8c.html#a76fa5e99a408d6e71082e94ac6d0575f" title="__rbtree_insert_case5" alt="" coords="1342,664,1493,691"/>
 <area shape="rect" id="node21" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="1546,689,1681,716"/>
 <area shape="rect" id="node23" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="1543,740,1684,767"/>
-<area shape="rect" id="node22" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="1733,715,1832,741"/>
+<area shape="rect" id="node22" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="1734,715,1887,741"/>
 <area shape="rect" id="node25" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="1361,816,1474,843"/>
 <area shape="rect" id="node28" href="$rbtree_8c.html#aefc27768d332471de2be0e16cdd6a513" title="__rbnode_t_depth" alt="" coords="349,284,475,311"/>
 <area shape="rect" id="node30" href="$rbtree_8c.html#a5efa02239dfed92c4ed1bb3d94de2656" title="Given a tree, return the first node for reverse post&#45;order traversal. " alt="" coords="337,335,487,361"/>

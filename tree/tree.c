@@ -164,7 +164,7 @@ void * tree_find(tree_t * t, void * key, tree_compare compare)
 }
 */
 
-void replace_node(tree_t * t, trnode_t * oldn, trnode_t * newn)
+void __tree_replace_node(tree_t * t, trnode_t * oldn, trnode_t * newn)
 {
 	if (oldn->parent == NULL) {
 		t->root = newn;
@@ -190,7 +190,7 @@ int tree_rotate_left(tree_t * t, trnode_t * n)
 	if (t->root == NULL) return(0);
 	if (n->right == NULL) return(0);
 	r = n->right;
-	replace_node(t, n, r);
+	__tree_replace_node(t, n, r);
 	n->right = r->left;
 	if (r->left != NULL) {
 		r->left->parent = n;
@@ -209,7 +209,7 @@ int tree_rotate_right(tree_t * t, trnode_t * n)
 	if (t->root == NULL) return(0);
 	if (n->left == NULL) return(0);
 	l = n->left;
-	replace_node(t, n, l);
+	__tree_replace_node(t, n, l);
 	n->left = l->right;
 	if (l->right != NULL) {
 		l->right->parent = n;
@@ -397,7 +397,7 @@ trnode_t * tree_detach_node(tree_t * t, trnode_t * n)
 
 	assert(n->left == NULL || n->right == NULL);
 	child = n->right == NULL ? n->left : n->right;
-	replace_node(t, n, child);
+	__tree_replace_node(t, n, child);
 	t->size--;
 
 	n->parent = NULL;

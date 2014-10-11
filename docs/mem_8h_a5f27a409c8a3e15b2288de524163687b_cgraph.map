@@ -19,7 +19,7 @@
 <area shape="rect" id="node18" href="$rbtree_8c.html#acc37d1f06fef3616bed538c92a951f8f" title="__rbtree_maximum_node" alt="" coords="824,309,992,336"/>
 <area shape="rect" id="node19" href="$rbtree_8c.html#a6a0f5779879b99ae8c31675ac7eb0a1d" title="__rbnode_t_color" alt="" coords="2065,563,2186,589"/>
 <area shape="rect" id="node20" href="$rbtree_8c.html#abcd5a0c6b013c882c9aa9dc512c8ddc2" title="__rbtree_delete_case1" alt="" coords="831,613,985,640"/>
-<area shape="rect" id="node24" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="2245,1221,2344,1248"/>
+<area shape="rect" id="node24" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="2246,1221,2399,1248"/>
 <area shape="rect" id="node21" href="$rbtree_8c.html#aedfaf48ab188e8a100e9b7b02bee1684" title="__rbtree_delete_case2" alt="" coords="1041,765,1194,792"/>
 <area shape="rect" id="node22" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="2069,841,2182,868"/>
 <area shape="rect" id="node23" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="2058,1145,2193,1172"/>

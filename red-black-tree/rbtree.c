@@ -231,7 +231,7 @@ void * rbtree_find(rbtree_t * t, void * key, rbtree_compare compare)
 }
 */
 
-void replace_node(rbtree_t * t, rbnode_t * oldn, rbnode_t * newn)
+void __rbtree_replace_node(rbtree_t * t, rbnode_t * oldn, rbnode_t * newn)
 {
 	if (oldn->parent == NULL) {
 		t->root = newn;
@@ -252,7 +252,7 @@ void __rbtree_rotate_left(rbtree_t * t, rbnode_t * n)
 	rbnode_t * r = NULL;
 
 	r = n->right;
-	replace_node(t, n, r);
+	__rbtree_replace_node(t, n, r);
 	n->right = r->left;
 	if (r->left != NULL) {
 		r->left->parent = n;
@@ -266,7 +266,7 @@ void __rbtree_rotate_right(rbtree_t * t, rbnode_t * n)
 	rbnode_t * l = NULL;
 
 	l = n->left;
-	replace_node(t, n, l);
+	__rbtree_replace_node(t, n, l);
 	n->left = l->right;
 	if (l->right != NULL) {
 		l->right->parent = n;
@@ -606,7 +606,7 @@ rbnode_t * rbtree_detach_node(rbtree_t * t, rbnode_t * n)
 		n->color = __rbnode_t_color(child);
 		__rbtree_delete_case1(t, n);
 	}
-	replace_node(t, n, child);
+	__rbtree_replace_node(t, n, child);
 	if (n->parent == NULL && child != NULL)
 		child->color = BLACK;
 	t->size--;

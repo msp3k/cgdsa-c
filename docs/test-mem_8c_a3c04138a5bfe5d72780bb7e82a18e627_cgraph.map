@@ -25,7 +25,7 @@
 <area shape="rect" id="node18" href="$rbtree_8c.html#a76fa5e99a408d6e71082e94ac6d0575f" title="__rbtree_insert_case5" alt="" coords="1874,803,2025,829"/>
 <area shape="rect" id="node19" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="2079,600,2214,627"/>
 <area shape="rect" id="node21" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="2076,549,2217,576"/>
-<area shape="rect" id="node20" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="2267,549,2365,576"/>
+<area shape="rect" id="node20" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="2267,549,2421,576"/>
 <area shape="rect" id="node23" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="2090,195,2203,221"/>
 <area shape="rect" id="node25" href="$mem_8c.html#a6a1080cd7b39e1706e19c16b03af1cfa" title="mf__mem_size" alt="" coords="705,777,815,804"/>
 <area shape="rect" id="node26" href="$mem_8c.html#ae6e1f337e0a7a3bf7e25819d7d21487f" title="mf__mem_begin" alt="" coords="873,1031,991,1057"/>

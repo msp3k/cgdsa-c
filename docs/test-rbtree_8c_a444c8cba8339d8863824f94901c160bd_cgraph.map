@@ -26,7 +26,7 @@
 <area shape="rect" id="node14" href="$rbtree_8c.html#a76fa5e99a408d6e71082e94ac6d0575f" title="__rbtree_insert_case5" alt="" coords="1759,148,1910,175"/>
 <area shape="rect" id="node15" href="$rbtree_8c.html#ac375b01a7355a90892ee4736d340f5dc" title="__rbtree_rotate_left" alt="" coords="1965,224,2099,251"/>
 <area shape="rect" id="node17" href="$rbtree_8c.html#a0b545cf4437d8c5d38248ae8e5f25053" title="__rbtree_rotate_right" alt="" coords="1961,351,2103,377"/>
-<area shape="rect" id="node16" href="$rbtree_8c.html#afe53c1cf283bf7953247008814060bc5" title="replace_node" alt="" coords="2152,351,2251,377"/>
+<area shape="rect" id="node16" href="$rbtree_8c.html#aaa93ebd2a596adf6c8e39d26daca3717" title="__rbtree_replace_node" alt="" coords="2153,351,2306,377"/>
 <area shape="rect" id="node19" href="$rbtree_8c.html#ae181139639e3e24907d8cd895354c93d" title="__rbtree_sibling" alt="" coords="1975,579,2089,605"/>
 <area shape="rect" id="node25" href="$test-dllist_8c.html#a2685ee0be285d37254928405d96ce3d9" title="compare" alt="" coords="565,5,637,32"/>
 <area shape="rect" id="node27" href="$rbtree_8c.html#a164cca3cfea8952f8f503a48b913084d" title="__rbtree_destroy_nodes" alt="" coords="521,56,682,83"/>
