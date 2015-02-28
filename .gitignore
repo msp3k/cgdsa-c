@@ -3,3 +3,7 @@
 double-linked-list/test-dllist
 red-black-tree/test-rbtree
 tree/test-tree
+docs
+memory-allocator/test-mem-pthread
+memory-allocator/test-mem
+strings/test-str
