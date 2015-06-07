@@ -1307,9 +1307,19 @@ Here is the call graph for this function:</div>
 <p>Return value:</p>
 <ul>
 <li>Success: NULL</li>
-<li>Failure: rbnode_t * pointer to the node on which func() failed </li>
+<li>Failure: rbnode_t * pointer to the node on which func() failed</li>
 </ul>
-
+<p>See also:</p>
+<ul>
+<li><a class="el" href="rbtree_8h.html#a9ce9f6f423502a2a109f8055668d4d2a" title="A processing function used by rbtree_apply() to apply a transformation to each value of each node in ...">rbtree_func()</a></li>
+</ul>
+<p>Example: The following code demonstrates how to create and use an apply function that will be called on all key/value pairs in a tree.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbnode__t.html">rbnode_t</a> * n = NULL;</div>
+<div class="line">n = <a class="code" href="rbtree_8c.html#ac0c2dd82c8b88b10245bc4522fe9ba86">rbtree_apply</a>(t, apply);</div>
+<div class="line"><span class="comment">// On failure, n will point to the node on which the apply function failed</span></div>
+<div class="line"><span class="comment">// On success, n will be NULL</span></div>
+<div class="line">assert(n == NULL);</div>
+</div><!-- fragment --> 
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00705">705</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00637">__rbtree_apply_function()</a>, and <a class="el" href="rbtree_8c_source.html#l00055">__rbtree_t::root</a>.</p>
@@ -1476,16 +1486,23 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Create a new tree. </p>
-<p>Compare is a pointer to a function used to compare void</p>
-<ul>
-<li>keys. Compare cannot be NULL. Free is a pointer to a function to call when destroying nodes. Free is responsible for properly releasing any memory used for the key and value stored by the node.</li>
-</ul>
+<p>Compare is a pointer to a function used to compare void keys. Compare cannot be NULL. Free is a pointer to a function to call when destroying nodes. Free is responsible for properly releasing any memory used for the key and value stored by the node.</p>
 <p>Return value:</p>
 <ul>
 <li>Success: A rbtree * pointer</li>
-<li>Failure: NULL </li>
+<li>Failure: NULL</li>
 </ul>
-
+<p>See also:</p>
+<ul>
+<li><a class="el" href="rbtree_8h.html#abc22639d779109f877104dc038b5eb3f" title="A compare function used for insersion and find. ">rbtree_compare()</a></li>
+<li><a class="el" href="rbtree_8h.html#a9bf1561b92ddf216c57425c3ece4b3f0" title="A free function used for node removal. ">rbtree_free()</a></li>
+</ul>
+<p>Example:</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbtree__t.html">rbtree_t</a> * t = <a class="code" href="rbtree_8c.html#a21781311b2d0ce0203c651b4706ee5e1">rbtree_create</a>(rbnode_data_cmp, NULL);</div>
+<div class="line">assert(t != NULL);</div>
+<div class="line"><span class="comment">// ... stuff ...</span></div>
+<div class="line">t = <a class="code" href="rbtree_8c.html#a04081812b705be81f807e8afa3eec04c">rbtree_destroy</a>(t); <span class="comment">// t will be set to NULL on success</span></div>
+</div><!-- fragment --> 
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00153">153</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00150">__rbtree_verify_properties</a>, <a class="el" href="test-dllist_8c_source.html#l00009">compare()</a>, <a class="el" href="rbtree_8c_source.html#l00056">__rbtree_t::compare</a>, <a class="el" href="rbtree_8c_source.html#l00057">__rbtree_t::free</a>, <a class="el" href="rbtree_8c_source.html#l00055">__rbtree_t::root</a>, and <a class="el" href="rbtree_8c_source.html#l00058">__rbtree_t::size</a>.</p>
@@ -2513,7 +2530,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 28 2014 10:42:55 for cgdsa-c by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 6 2015 22:56:49 for cgdsa-c by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -46,3 +46,5 @@ check::
 	@echo "OK -- ALL TESTS PASSED"
 	@echo
 
+view-docs: docs
+	xdg-open docs/index.html

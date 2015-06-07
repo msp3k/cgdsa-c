@@ -238,9 +238,17 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A data structure used for a single node in the tree. </p>
-<p>It contains a void * pointer to a key, and a void * pointer to an associated value. </p>
-
-<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00045">45</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
+<p>It contains a void * pointer to a key, and a void * pointer to an associated value.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbnode__t.html">rbnode_t</a> * n = <a class="code" href="rbtree_8c.html#ab1f8c959d26d5326eea7375e5da09738">rbtree_find</a>(t, k);</div>
+<div class="line"><span class="keywordflow">if</span> (n != NULL) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Found it\n&quot;</span>);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Key: %s\n&quot;</span>, (<span class="keywordtype">char</span> *)<a class="code" href="rbtree_8c.html#a07ee62245ed2dfceed2c3dfb6a2b9304">rbtree_key</a>(n));</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Value: %d\n&quot;</span>, *(<span class="keywordtype">int</span> *)<a class="code" href="rbtree_8c.html#a2ac84b4dc1354c6188387755ed113e5a">rbtree_value</a>(n));</div>
+<div class="line">} <span class="keywordflow">else</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;Not found\n&quot;</span>);</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00057">57</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
 
 </div>
 </div>
@@ -259,10 +267,29 @@ Functions</h2></td></tr>
 <ul>
 <li>if (left &lt; right) return -1</li>
 <li>if (left &gt; right) return 1</li>
-<li>otherwise return 0 </li>
+<li>otherwise return 0</li>
 </ul>
-
-<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00061">61</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
+<p>See also:</p>
+<ul>
+<li><a class="el" href="rbtree_8h.html#a21781311b2d0ce0203c651b4706ee5e1" title="Create a new tree. ">rbtree_create()</a></li>
+</ul>
+<p>Example: The following code demonstrates how to create a function that compares two integers passed as (void *) pointers.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> rbnode_data_cmp(<span class="keyword">const</span> <span class="keywordtype">void</span> * left, <span class="keyword">const</span> <span class="keywordtype">void</span> * right)</div>
+<div class="line">{</div>
+<div class="line">        <span class="keywordtype">int</span> l = 0;</div>
+<div class="line">        <span class="keywordtype">int</span> r = 0;</div>
+<div class="line"></div>
+<div class="line">        l = *(<span class="keywordtype">int</span> *)left;</div>
+<div class="line">        r = *(<span class="keywordtype">int</span> *)right;</div>
+<div class="line">        <span class="keywordflow">if</span> (l &lt; r) <span class="keywordflow">return</span>(-1);</div>
+<div class="line">        <span class="keywordflow">if</span> (l &gt; r) <span class="keywordflow">return</span>(1);</div>
+<div class="line">        <span class="keywordflow">return</span>(0);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Example: To use the above compare function, pass the function name as the first argument to <a class="el" href="rbtree_8h.html#a21781311b2d0ce0203c651b4706ee5e1" title="Create a new tree. ">rbtree_create()</a>.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbtree__t.html">rbtree_t</a> * t = <a class="code" href="rbtree_8c.html#a21781311b2d0ce0203c651b4706ee5e1">rbtree_create</a>(rbnode_data_cmp, NULL);</div>
+<div class="line">assert(t != NULL);</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00110">110</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
 
 </div>
 </div>
@@ -277,9 +304,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A free function used for node removal. </p>
-<p>This function should properly destroy a key and it's associated value, if necessary. It should return 1 on success, and 0 on failure. </p>
-
-<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00067">67</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
+<p>This function should properly destroy a key and it's associated value, if necessary. It should return 1 on success, and 0 on failure.</p>
+<p>See also:</p>
+<ul>
+<li><a class="el" href="rbtree_8h.html#a21781311b2d0ce0203c651b4706ee5e1" title="Create a new tree. ">rbtree_create()</a></li>
+</ul>
+<p>Example: The following code demonstrates how to create a free function that will be called on all key and value pairs in the tree.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> free_rbnode_data(<span class="keywordtype">void</span> * key, <span class="keywordtype">void</span> * value) {</div>
+<div class="line">        <a class="code" href="struct____tree__t.html#a56e9a7bc88d4a43e34fb0534a3273fd5">free</a>(key);</div>
+<div class="line">        <a class="code" href="struct____tree__t.html#a56e9a7bc88d4a43e34fb0534a3273fd5">free</a>(value);</div>
+<div class="line">        <span class="keywordflow">return</span>(1); <span class="comment">// This is a simple function that assumes free() didn&#39;t fail</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Example: To use the above free function, pass the function name as the second argument to <a class="el" href="rbtree_8h.html#a21781311b2d0ce0203c651b4706ee5e1" title="Create a new tree. ">rbtree_create()</a>.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbtree__t.html">rbtree_t</a> * t = <a class="code" href="rbtree_8c.html#a21781311b2d0ce0203c651b4706ee5e1">rbtree_create</a>(rbnode_data_cmp, free_rbnode_data);</div>
+<div class="line">assert(t != NULL);</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00138">138</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
 
 </div>
 </div>
@@ -294,8 +334,31 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A processing function used by <a class="el" href="rbtree_8h.html#ac0c2dd82c8b88b10245bc4522fe9ba86" title="Apply a transformation to each value of each node in the tree. ">rbtree_apply()</a> to apply a transformation to each value of each node in the tree. </p>
-
-<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00072">72</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
+<p>Expected return value:</p>
+<ul>
+<li>Success: 1</li>
+<li>Failure: 0</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li><a class="el" href="rbtree_8h.html#ac0c2dd82c8b88b10245bc4522fe9ba86" title="Apply a transformation to each value of each node in the tree. ">rbtree_apply()</a></li>
+</ul>
+<p>Example: The following code demonstrates how to create an apply function that will be called on all key/value pairs in a tree.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> apply(<span class="keywordtype">void</span> * key, <span class="keywordtype">void</span> * value)</div>
+<div class="line">{</div>
+<div class="line">        <span class="comment">// 1) Typecast the (void *) value to an (int *)</span></div>
+<div class="line">        <span class="comment">// 2) De-reference it from an (int *) to an (int)</span></div>
+<div class="line">        <span class="comment">// 3) Increment it&#39;s value by one</span></div>
+<div class="line">        (*(<span class="keywordtype">int</span> *)value)++;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Example: To use the above apply function, pass the function name as the second argument to <a class="el" href="rbtree_8h.html#ac0c2dd82c8b88b10245bc4522fe9ba86" title="Apply a transformation to each value of each node in the tree. ">rbtree_apply()</a>.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbnode__t.html">rbnode_t</a> * n = NULL;</div>
+<div class="line">n = <a class="code" href="rbtree_8c.html#ac0c2dd82c8b88b10245bc4522fe9ba86">rbtree_apply</a>(t, apply);</div>
+<div class="line"><span class="comment">// On failure, n will point to the node on which the apply function failed</span></div>
+<div class="line"><span class="comment">// On success, n will be NULL</span></div>
+<div class="line">assert(n == NULL);</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00174">174</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
 
 </div>
 </div>
@@ -310,9 +373,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A data structure used for the tree. </p>
-<p>It contains a pointer to the root rbnode_t, a pointer to a compare function, a pointer to a free function, and a size_t value containing the number of nodes in the tree. </p>
-
-<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00051">51</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
+<p>It contains a pointer to the root rbnode_t, a pointer to a compare function, a pointer to a free function, and a size_t value containing the number of nodes in the tree.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbtree__t.html">rbtree_t</a> * t = <a class="code" href="rbtree_8c.html#a21781311b2d0ce0203c651b4706ee5e1">rbtree_create</a>(rbnode_data_cmp, NULL);</div>
+<div class="line">assert(t != NULL);</div>
+<div class="line"><span class="comment">// ... stuff ...</span></div>
+<div class="line">t = <a class="code" href="rbtree_8c.html#a04081812b705be81f807e8afa3eec04c">rbtree_destroy</a>(t); <span class="comment">// t will be set to NULL on success</span></div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="rbtree_8h_source.html#l00072">72</a> of file <a class="el" href="rbtree_8h_source.html">rbtree.h</a>.</p>
 
 </div>
 </div>
@@ -345,9 +413,19 @@ Functions</h2></td></tr>
 <p>Return value:</p>
 <ul>
 <li>Success: NULL</li>
-<li>Failure: rbnode_t * pointer to the node on which func() failed </li>
+<li>Failure: rbnode_t * pointer to the node on which func() failed</li>
 </ul>
-
+<p>See also:</p>
+<ul>
+<li><a class="el" href="rbtree_8h.html#a9ce9f6f423502a2a109f8055668d4d2a" title="A processing function used by rbtree_apply() to apply a transformation to each value of each node in ...">rbtree_func()</a></li>
+</ul>
+<p>Example: The following code demonstrates how to create and use an apply function that will be called on all key/value pairs in a tree.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbnode__t.html">rbnode_t</a> * n = NULL;</div>
+<div class="line">n = <a class="code" href="rbtree_8c.html#ac0c2dd82c8b88b10245bc4522fe9ba86">rbtree_apply</a>(t, apply);</div>
+<div class="line"><span class="comment">// On failure, n will point to the node on which the apply function failed</span></div>
+<div class="line"><span class="comment">// On success, n will be NULL</span></div>
+<div class="line">assert(n == NULL);</div>
+</div><!-- fragment --> 
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00705">705</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00637">__rbtree_apply_function()</a>, and <a class="el" href="rbtree_8c_source.html#l00055">__rbtree_t::root</a>.</p>
@@ -514,16 +592,23 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Create a new tree. </p>
-<p>Compare is a pointer to a function used to compare void</p>
-<ul>
-<li>keys. Compare cannot be NULL. Free is a pointer to a function to call when destroying nodes. Free is responsible for properly releasing any memory used for the key and value stored by the node.</li>
-</ul>
+<p>Compare is a pointer to a function used to compare void keys. Compare cannot be NULL. Free is a pointer to a function to call when destroying nodes. Free is responsible for properly releasing any memory used for the key and value stored by the node.</p>
 <p>Return value:</p>
 <ul>
 <li>Success: A rbtree * pointer</li>
-<li>Failure: NULL </li>
+<li>Failure: NULL</li>
 </ul>
-
+<p>See also:</p>
+<ul>
+<li><a class="el" href="rbtree_8h.html#abc22639d779109f877104dc038b5eb3f" title="A compare function used for insersion and find. ">rbtree_compare()</a></li>
+<li><a class="el" href="rbtree_8h.html#a9bf1561b92ddf216c57425c3ece4b3f0" title="A free function used for node removal. ">rbtree_free()</a></li>
+</ul>
+<p>Example:</p>
+<div class="fragment"><div class="line"><a class="code" href="struct____rbtree__t.html">rbtree_t</a> * t = <a class="code" href="rbtree_8c.html#a21781311b2d0ce0203c651b4706ee5e1">rbtree_create</a>(rbnode_data_cmp, NULL);</div>
+<div class="line">assert(t != NULL);</div>
+<div class="line"><span class="comment">// ... stuff ...</span></div>
+<div class="line">t = <a class="code" href="rbtree_8c.html#a04081812b705be81f807e8afa3eec04c">rbtree_destroy</a>(t); <span class="comment">// t will be set to NULL on success</span></div>
+</div><!-- fragment --> 
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00153">153</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00150">__rbtree_verify_properties</a>, <a class="el" href="test-dllist_8c_source.html#l00009">compare()</a>, <a class="el" href="rbtree_8c_source.html#l00056">__rbtree_t::compare</a>, <a class="el" href="rbtree_8c_source.html#l00057">__rbtree_t::free</a>, <a class="el" href="rbtree_8c_source.html#l00055">__rbtree_t::root</a>, and <a class="el" href="rbtree_8c_source.html#l00058">__rbtree_t::size</a>.</p>
@@ -1551,7 +1636,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 28 2014 10:42:55 for cgdsa-c by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 6 2015 22:56:49 for cgdsa-c by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

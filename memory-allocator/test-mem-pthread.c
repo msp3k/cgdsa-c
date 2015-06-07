@@ -4,8 +4,8 @@
 #include <pthread.h>
 #include <unistd.h> // sleep
 
-#define NUM_THREADS 10000
-#define NUM_REPETITIONS 1000
+#define NUM_THREADS 8
+#define NUM_REPETITIONS 100000
 
 #include "mem.h"
 
