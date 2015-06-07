@@ -41,12 +41,33 @@
 
 /** A data structure used for a single node in the tree.  It contains a void *
  * pointer to a key, and a void * pointer to an associated value.
+ *
+ * Example:
+ *
+ * @code
+ * rbnode_t * n = rbtree_find(t, k);
+ * if (n != NULL) {
+ * 	printf("Found it\n");
+ * 	printf("Key: %s\n", (char *)rbtree_key(n));
+ * 	printf("Value: %d\n", *(int *)rbtree_value(n));
+ * } else
+ * 	printf("Not found\n");
+ * @endcode
  */
 typedef struct __rbnode_t rbnode_t;
 
 /** A data structure used for the tree.  It contains a pointer to the root
  * rbnode_t, a pointer to a compare function, a pointer to a free function,
  * and a size_t value containing the number of nodes in the tree.
+ *
+ * Example:
+ *
+ * @code
+ * rbtree_t * t = rbtree_create(rbnode_data_cmp, NULL);
+ * assert(t != NULL);
+ * // ... stuff ...
+ * t = rbtree_destroy(t); // t will be set to NULL on success
+ * @endcode
  */
 typedef struct __rbtree_t rbtree_t;
 
@@ -57,30 +78,124 @@ typedef struct __rbtree_t rbtree_t;
  * - if (left < right) return -1
  * - if (left > right) return 1
  * - otherwise return 0
+ *
+ * See also:
+ * - rbtree_create()
+ *
+ * Example: The following code demonstrates how to create a function that
+ * compares two integers passed as (void *) pointers.
+ *
+ * @code
+ * int rbnode_data_cmp(const void * left, const void * right)
+ * {
+ * 	int l = 0;
+ * 	int r = 0;
+ * 
+ * 	l = *(int *)left;
+ * 	r = *(int *)right;
+ * 	if (l < r) return(-1);
+ * 	if (l > r) return(1);
+ * 	return(0);
+ * }
+ * @endcode
+ *
+ * Example: To use the above compare function, pass the function name as the
+ * first argument to rbtree_create().
+ *
+ * @code
+ * rbtree_t * t = rbtree_create(rbnode_data_cmp, NULL);
+ * assert(t != NULL);
+ * @endcode
  */
 typedef int (*rbtree_compare)(const void * left, const void * right);
 
 /** A free function used for node removal.  This function should properly
  * destroy a key and it's associated value, if necessary.  It should return 1
  * on success, and 0 on failure.
+ *
+ * See also:
+ * - rbtree_create()
+ *
+ * Example: The following code demonstrates how to create a free function that
+ * will be called on all key and value pairs in the tree.
+ *
+ * @code
+ * int free_rbnode_data(void * key, void * value) {
+ * 	free(key);
+ * 	free(value);
+ * 	return(1); // This is a simple function that assumes free() didn't fail
+ * }
+ * @endcode
+ *
+ * Example: To use the above free function, pass the function name as the
+ * second argument to rbtree_create().
+ *
+ * @code
+ * rbtree_t * t = rbtree_create(rbnode_data_cmp, free_rbnode_data);
+ * assert(t != NULL);
+ * @endcode
  */
 typedef int (*rbtree_free)(void * key, void * value);
 
 /** A processing function used by rbtree_apply() to apply a transformation to
  * each value of each node in the tree.
+ *
+ * Expected return value:
+ * * Success: 1
+ * * Failure: 0
+ *
+ * See also:
+ * - rbtree_apply()
+ *
+ * Example: The following code demonstrates how to create an apply function
+ * that will be called on all key/value pairs in a tree.
+ *
+ * @code
+ * int apply(void * key, void * value)
+ * {
+ * 	// 1) Typecast the (void *) value to an (int *)
+ * 	// 2) De-reference it from an (int *) to an (int)
+ * 	// 3) Increment it's value by one
+ * 	(*(int *)value)++;
+ * }
+ * @endcode
+ *
+ * Example: To use the above apply function, pass the function name as the
+ * second argument to rbtree_apply().
+ *
+ * @code
+ * rbnode_t * n = NULL;
+ * n = rbtree_apply(t, apply);
+ * // On failure, n will point to the node on which the apply function failed
+ * // On success, n will be NULL
+ * assert(n == NULL);
+ * @endcode
  */
 typedef int (*rbtree_func)(const void * key, void * value);
 
 //---[ Tree Functions ]------------------------------------------------------
 
 /** Create a new tree.  Compare is a pointer to a function used to compare void
- * * keys.  Compare cannot be NULL.  Free is a pointer to a function to call
+ * keys.  Compare cannot be NULL.  Free is a pointer to a function to call
  * when destroying nodes.  Free is responsible for properly releasing any
  * memory used for the key and value stored by the node.
  *
  * Return value:
  * - Success: A rbtree * pointer
  * - Failure: NULL
+ *
+ * See also:
+ * - rbtree_compare()
+ * - rbtree_free()
+ *
+ * Example:
+ *
+ * @code
+ * rbtree_t * t = rbtree_create(rbnode_data_cmp, NULL);
+ * assert(t != NULL);
+ * // ... stuff ...
+ * t = rbtree_destroy(t); // t will be set to NULL on success
+ * @endcode
  */
 rbtree_t * rbtree_create(rbtree_compare compare, rbtree_free free);
 
@@ -129,6 +244,20 @@ size_t rbtree_size(rbtree_t * t);
  * Return value:
  * - Success: NULL
  * - Failure: rbnode_t * pointer to the node on which func() failed
+ *
+ * See also:
+ * - rbtree_func()
+ *
+ * Example: The following code demonstrates how to create and use an apply
+ * function that will be called on all key/value pairs in a tree.
+ *
+ * @code
+ * rbnode_t * n = NULL;
+ * n = rbtree_apply(t, apply);
+ * // On failure, n will point to the node on which the apply function failed
+ * // On success, n will be NULL
+ * assert(n == NULL);
+ * @endcode
  */
 rbnode_t * rbtree_apply(rbtree_t * t, rbtree_func func);
 
