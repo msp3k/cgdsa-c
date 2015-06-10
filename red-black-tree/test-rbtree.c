@@ -1104,6 +1104,74 @@ void test_008(void)
 
 //============================================================================
 
+int apply(const void * key, void * value)
+{
+	(*(int *)value)++;
+	return(1);
+}
+
+void test_009(void)
+{
+	int a[5] = { 0, 1, 2, 3, 4 };
+	int b[5] = { 4, 5, 6, 7, 8 };
+	rbtree_t * t = NULL;
+
+	t = rbtree_create(cmp, NULL);
+	assert(t != NULL);
+
+	assert(rbtree_insert(t, (void *)&(a[0]), (void *)&b[0]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[1]), (void *)&b[1]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[2]), (void *)&b[2]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[3]), (void *)&b[3]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[4]), (void *)&b[4]) != 0);
+	assert(rbtree_apply(t, apply) == NULL);
+	assert(a[0] == 0);
+	assert(a[1] == 1);
+	assert(a[2] == 2);
+	assert(a[3] == 3);
+	assert(a[4] == 4);
+	assert(b[0] == 5);
+	assert(b[1] == 6);
+	assert(b[2] == 7);
+	assert(b[3] == 8);
+	assert(b[4] == 9);
+	rbtree_destroy(t);
+}
+
+//============================================================================
+
+void test_010(void)
+{
+	int a[5] = { 0, 1, 2, 3, 4 };
+	int b[5] = { 4, 5, 6, 7, 8 };
+	rbtree_t * t = NULL;
+
+	t = rbtree_create(cmp, NULL);
+	assert(t != NULL);
+
+	assert(rbtree_insert(t, (void *)&(a[0]), (void *)&b[0]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[1]), (void *)&b[1]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[2]), (void *)&b[2]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[3]), (void *)&b[3]) != 0);
+	assert(rbtree_insert(t, (void *)&(a[4]), (void *)&b[4]) != 0);
+	assert(rbtree_size(t) == 5);
+	assert(rbtree_clear(t));
+	assert(a[0] == 0);
+	assert(a[1] == 1);
+	assert(a[2] == 2);
+	assert(a[3] == 3);
+	assert(a[4] == 4);
+	assert(b[0] == 5);
+	assert(b[1] == 6);
+	assert(b[2] == 7);
+	assert(b[3] == 8);
+	assert(b[4] == 9);
+	assert(rbtree_size(t) == 0);
+	rbtree_destroy(t);
+}
+
+//============================================================================
+
 int main(int argc, char ** argv)
 {
 	test_001();
@@ -1114,6 +1182,7 @@ int main(int argc, char ** argv)
 	test_006();
 	test_007();
 	test_008();
+	test_009();
 	// TODO: Test rbtree_clear(t);
 	return(0);
 }

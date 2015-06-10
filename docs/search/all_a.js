@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['parent',['parent',['../struct____rbnode__t.html#a224e9e57af3f17a0040c09629d477040',1,'__rbnode_t::parent()'],['../struct____trnode__t.html#a45648bfb3466475038c68dac1c341d66',1,'__trnode_t::parent()']]],
-  ['prev',['prev',['../struct____dllist__t.html#a8f48b62c6eed6e0ea142e0caf10d3255',1,'__dllist_t']]]
+  ['next',['next',['../struct____dllist__t.html#acf032ffd810e1b2c53324a1150a1b315',1,'__dllist_t']]],
+  ['num_5frepetitions',['NUM_REPETITIONS',['../test-mem-pthread_8c.html#a003a758f41a478d525cc94f4bccc57d9',1,'test-mem-pthread.c']]],
+  ['num_5fthreads',['NUM_THREADS',['../test-mem-pthread_8c.html#a7735206bdfad487588bba2126b806ab7',1,'test-mem-pthread.c']]]
 ];

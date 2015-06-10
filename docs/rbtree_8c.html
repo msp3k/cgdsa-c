@@ -1315,7 +1315,7 @@ Here is the call graph for this function:</div>
 </ul>
 <p>Example: The following code demonstrates how to create and use an apply function that will be called on all key/value pairs in a tree.</p>
 <div class="fragment"><div class="line"><a class="code" href="struct____rbnode__t.html">rbnode_t</a> * n = NULL;</div>
-<div class="line">n = <a class="code" href="rbtree_8c.html#ac0c2dd82c8b88b10245bc4522fe9ba86">rbtree_apply</a>(t, apply);</div>
+<div class="line">n = <a class="code" href="rbtree_8c.html#ac0c2dd82c8b88b10245bc4522fe9ba86">rbtree_apply</a>(t, <a class="code" href="test-rbtree_8c.html#afba8296dba01c5e230496d0fccc0da89">apply</a>);</div>
 <div class="line"><span class="comment">// On failure, n will point to the node on which the apply function failed</span></div>
 <div class="line"><span class="comment">// On success, n will be NULL</span></div>
 <div class="line">assert(n == NULL);</div>
@@ -1323,6 +1323,8 @@ Here is the call graph for this function:</div>
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00705">705</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00637">__rbtree_apply_function()</a>, and <a class="el" href="rbtree_8c_source.html#l00055">__rbtree_t::root</a>.</p>
+
+<p>Referenced by <a class="el" href="test-rbtree_8c_source.html#l01113">test_009()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1401,15 +1403,21 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Empty the tree by destroying all of it's nodes. </p>
+<p>Notes: The key/value pairs stored in the nodes are not destroyed.</p>
 <p>Return value:</p>
 <ul>
 <li>Success: 1</li>
-<li>Failure: 0 </li>
+<li>Failure: 0</li>
 </ul>
-
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="rbtree_8c.html#ae193cc8462497eb8fcd9fe954cf3331e">rbtree_clear</a>(t)) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Failed\n&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00167">167</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00048">__rbnode_t::parent</a>, <a class="el" href="rbtree_8c_source.html#l00983">rbtree_post_order_first()</a>, <a class="el" href="rbtree_8c_source.html#l01005">rbtree_post_order_next()</a>, and <a class="el" href="rbtree_8c_source.html#l00622">rbtree_remove()</a>.</p>
+
+<p>Referenced by <a class="el" href="test-rbtree_8c_source.html#l01143">test_010()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1507,7 +1515,7 @@ Here is the call graph for this function:</div>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00150">__rbtree_verify_properties</a>, <a class="el" href="test-dllist_8c_source.html#l00009">compare()</a>, <a class="el" href="rbtree_8c_source.html#l00056">__rbtree_t::compare</a>, <a class="el" href="rbtree_8c_source.html#l00057">__rbtree_t::free</a>, <a class="el" href="rbtree_8c_source.html#l00055">__rbtree_t::root</a>, and <a class="el" href="rbtree_8c_source.html#l00058">__rbtree_t::size</a>.</p>
 
-<p>Referenced by <a class="el" href="mem_8c_source.html#l00068">mf__mem_init()</a>, <a class="el" href="rbtree_8c_source.html#l00689">rbtree_clone()</a>, <a class="el" href="test-rbtree_8c_source.html#l00081">test_001()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, <a class="el" href="test-rbtree_8c_source.html#l00280">test_003()</a>, <a class="el" href="test-rbtree_8c_source.html#l00370">test_004()</a>, <a class="el" href="test-rbtree_8c_source.html#l00421">test_005()</a>, <a class="el" href="test-rbtree_8c_source.html#l00491">test_006()</a>, <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>, and <a class="el" href="test-rbtree_8c_source.html#l01010">test_008()</a>.</p>
+<p>Referenced by <a class="el" href="mem_8c_source.html#l00068">mf__mem_init()</a>, <a class="el" href="rbtree_8c_source.html#l00689">rbtree_clone()</a>, <a class="el" href="test-rbtree_8c_source.html#l00081">test_001()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, <a class="el" href="test-rbtree_8c_source.html#l00280">test_003()</a>, <a class="el" href="test-rbtree_8c_source.html#l00370">test_004()</a>, <a class="el" href="test-rbtree_8c_source.html#l00421">test_005()</a>, <a class="el" href="test-rbtree_8c_source.html#l00491">test_006()</a>, <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>, <a class="el" href="test-rbtree_8c_source.html#l01010">test_008()</a>, <a class="el" href="test-rbtree_8c_source.html#l01113">test_009()</a>, and <a class="el" href="test-rbtree_8c_source.html#l01143">test_010()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1541,7 +1549,7 @@ Here is the call graph for this function:</div>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00654">__rbtree_destroy_nodes()</a>, and <a class="el" href="rbtree_8c_source.html#l00055">__rbtree_t::root</a>.</p>
 
-<p>Referenced by <a class="el" href="rbtree_8c_source.html#l00689">rbtree_clone()</a>, <a class="el" href="test-rbtree_8c_source.html#l00081">test_001()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, <a class="el" href="test-rbtree_8c_source.html#l00280">test_003()</a>, <a class="el" href="test-rbtree_8c_source.html#l00370">test_004()</a>, <a class="el" href="test-rbtree_8c_source.html#l00421">test_005()</a>, <a class="el" href="test-rbtree_8c_source.html#l00491">test_006()</a>, <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>, <a class="el" href="test-rbtree_8c_source.html#l01010">test_008()</a>, and <a class="el" href="test-rbtree_8c_source.html#l00210">test_delete_permutation()</a>.</p>
+<p>Referenced by <a class="el" href="rbtree_8c_source.html#l00689">rbtree_clone()</a>, <a class="el" href="test-rbtree_8c_source.html#l00081">test_001()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, <a class="el" href="test-rbtree_8c_source.html#l00280">test_003()</a>, <a class="el" href="test-rbtree_8c_source.html#l00370">test_004()</a>, <a class="el" href="test-rbtree_8c_source.html#l00421">test_005()</a>, <a class="el" href="test-rbtree_8c_source.html#l00491">test_006()</a>, <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>, <a class="el" href="test-rbtree_8c_source.html#l01010">test_008()</a>, <a class="el" href="test-rbtree_8c_source.html#l01113">test_009()</a>, <a class="el" href="test-rbtree_8c_source.html#l01143">test_010()</a>, and <a class="el" href="test-rbtree_8c_source.html#l00210">test_delete_permutation()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1795,13 +1803,20 @@ Here is the call graph for this function:</div>
 <li>Success: 1</li>
 <li>Failure: 0</li>
 </ul>
-<p>Notes: Be aware that when inserting a duplicate key, the original node is removed and replaced with the new key/value pair. </p>
-
+<p>Notes: Be aware that when inserting a duplicate key, the original node is removed and replaced with the new key/value pair.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> * key = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><span class="keywordtype">int</span> * value = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line">*key = 5;</div>
+<div class="line">*value = 7;</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="rbtree_8c.html#ac3a6d87a1a3990ef98de3a4e6547cab1">rbtree_insert</a>(t, (<span class="keywordtype">void</span> *)key, (<span class="keywordtype">void</span> *)value)) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Failed\n&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00460">460</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00183">__rbtree_new_node()</a>, <a class="el" href="rbtree_8c_source.html#l00403">rbtree_attach_node()</a>, and <a class="el" href="rbtree_8c_source.html#l00043">RED</a>.</p>
 
-<p>Referenced by <a class="el" href="rbtree_8c_source.html#l00674">__rbtree_clone_node()</a>, <a class="el" href="mem_8c_source.html#l00079">mf__mem_alloc()</a>, <a class="el" href="mem_8c_source.html#l00165">mf__mem_realloc()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, <a class="el" href="test-rbtree_8c_source.html#l00370">test_004()</a>, <a class="el" href="test-rbtree_8c_source.html#l00421">test_005()</a>, <a class="el" href="test-rbtree_8c_source.html#l00491">test_006()</a>, <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>, <a class="el" href="test-rbtree_8c_source.html#l01010">test_008()</a>, and <a class="el" href="test-rbtree_8c_source.html#l00241">test_insert_permutation()</a>.</p>
+<p>Referenced by <a class="el" href="rbtree_8c_source.html#l00674">__rbtree_clone_node()</a>, <a class="el" href="mem_8c_source.html#l00079">mf__mem_alloc()</a>, <a class="el" href="mem_8c_source.html#l00165">mf__mem_realloc()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, <a class="el" href="test-rbtree_8c_source.html#l00370">test_004()</a>, <a class="el" href="test-rbtree_8c_source.html#l00421">test_005()</a>, <a class="el" href="test-rbtree_8c_source.html#l00491">test_006()</a>, <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>, <a class="el" href="test-rbtree_8c_source.html#l01010">test_008()</a>, <a class="el" href="test-rbtree_8c_source.html#l01113">test_009()</a>, <a class="el" href="test-rbtree_8c_source.html#l01143">test_010()</a>, and <a class="el" href="test-rbtree_8c_source.html#l00241">test_insert_permutation()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2295,9 +2310,17 @@ Here is the call graph for this function:</div>
 <p>Return value:</p>
 <ul>
 <li>Success: 1</li>
-<li>Failure: 0 </li>
+<li>Failure: 0</li>
 </ul>
-
+<div class="fragment"><div class="line"><a class="code" href="struct____rbnode__t.html">rbnode_t</a> * n = <a class="code" href="rbtree_8c.html#ab1f8c959d26d5326eea7375e5da09738">rbtree_find</a>(t, k);</div>
+<div class="line"><span class="keywordflow">if</span> (n != NULL) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Found it\n&quot;</span>);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Key: %s\n&quot;</span>, (<span class="keywordtype">char</span> *)<a class="code" href="rbtree_8c.html#a07ee62245ed2dfceed2c3dfb6a2b9304">rbtree_key</a>(n));</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Value: %d\n&quot;</span>, *(<span class="keywordtype">int</span> *)<a class="code" href="rbtree_8c.html#a2ac84b4dc1354c6188387755ed113e5a">rbtree_value</a>(n));</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Not found\n&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 <p>Definition at line <a class="el" href="rbtree_8c_source.html#l00622">622</a> of file <a class="el" href="rbtree_8c_source.html">rbtree.c</a>.</p>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00057">__rbtree_t::free</a>, <a class="el" href="rbtree_8c_source.html#l00050">__rbnode_t::key</a>, <a class="el" href="rbtree_8c_source.html#l00587">rbtree_detach_node()</a>, and <a class="el" href="rbtree_8c_source.html#l00051">__rbnode_t::value</a>.</p>
@@ -2364,7 +2387,7 @@ Here is the call graph for this function:</div>
 
 <p>References <a class="el" href="rbtree_8c_source.html#l00058">__rbtree_t::size</a>.</p>
 
-<p>Referenced by <a class="el" href="test-rbtree_8c_source.html#l00081">test_001()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, and <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>.</p>
+<p>Referenced by <a class="el" href="test-rbtree_8c_source.html#l00081">test_001()</a>, <a class="el" href="test-rbtree_8c_source.html#l00093">test_002()</a>, <a class="el" href="test-rbtree_8c_source.html#l00840">test_007()</a>, and <a class="el" href="test-rbtree_8c_source.html#l01143">test_010()</a>.</p>
 
 </div>
 </div>
@@ -2530,7 +2553,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 6 2015 22:56:49 for cgdsa-c by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 10 2015 17:25:12 for cgdsa-c by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

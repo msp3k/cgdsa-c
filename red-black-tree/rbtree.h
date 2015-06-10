@@ -50,8 +50,9 @@
  * 	printf("Found it\n");
  * 	printf("Key: %s\n", (char *)rbtree_key(n));
  * 	printf("Value: %d\n", *(int *)rbtree_value(n));
- * } else
+ * } else {
  * 	printf("Not found\n");
+ * }
  * @endcode
  */
 typedef struct __rbnode_t rbnode_t;
@@ -126,14 +127,6 @@ typedef int (*rbtree_compare)(const void * left, const void * right);
  * 	return(1); // This is a simple function that assumes free() didn't fail
  * }
  * @endcode
- *
- * Example: To use the above free function, pass the function name as the
- * second argument to rbtree_create().
- *
- * @code
- * rbtree_t * t = rbtree_create(rbnode_data_cmp, free_rbnode_data);
- * assert(t != NULL);
- * @endcode
  */
 typedef int (*rbtree_free)(void * key, void * value);
 
@@ -157,18 +150,8 @@ typedef int (*rbtree_free)(void * key, void * value);
  * 	// 2) De-reference it from an (int *) to an (int)
  * 	// 3) Increment it's value by one
  * 	(*(int *)value)++;
+ * 	return(1);
  * }
- * @endcode
- *
- * Example: To use the above apply function, pass the function name as the
- * second argument to rbtree_apply().
- *
- * @code
- * rbnode_t * n = NULL;
- * n = rbtree_apply(t, apply);
- * // On failure, n will point to the node on which the apply function failed
- * // On success, n will be NULL
- * assert(n == NULL);
  * @endcode
  */
 typedef int (*rbtree_func)(const void * key, void * value);
@@ -200,10 +183,18 @@ typedef int (*rbtree_func)(const void * key, void * value);
 rbtree_t * rbtree_create(rbtree_compare compare, rbtree_free free);
 
 /** Empty the tree by destroying all of it's nodes.
+ * 
+ * Notes: The key/value pairs stored in the nodes are not destroyed.
  *
  * Return value:
  * - Success: 1
  * - Failure: 0
+ *
+ * @code
+ * if (!rbtree_clear(t)) {
+ * 	printf("Failed\n");
+ * }
+ * @endcode
  */
 int rbtree_clear(rbtree_t * t);
 
@@ -216,6 +207,16 @@ int rbtree_clear(rbtree_t * t);
  *
  * Notes: Be aware that when inserting a duplicate key, the original node is
  * removed and replaced with the new key/value pair.
+ *
+ * @code
+ * int * key = malloc(sizeof(int));
+ * int * value = malloc(sizeof(int));
+ * *key = 5;
+ * *value = 7;
+ * if (!rbtree_insert(t, (void *)key, (void *)value)) {
+ * 	printf("Failed\n");
+ * }
+ * @endcode
  */
 int rbtree_insert(rbtree_t * t, void * key, void * value);
 
@@ -232,6 +233,17 @@ rbnode_t * rbtree_find(rbtree_t * t, void * key);
  * Return value:
  * - Success: 1
  * - Failure: 0
+ *
+ * @code
+ * rbnode_t * n = rbtree_find(t, k);
+ * if (n != NULL) {
+ * 	printf("Found it\n");
+ * 	printf("Key: %s\n", (char *)rbtree_key(n));
+ * 	printf("Value: %d\n", *(int *)rbtree_value(n));
+ * } else {
+ * 	printf("Not found\n");
+ * }
+ * @endcode
  */
 int rbtree_remove(rbtree_t * t, rbnode_t * n);
 
