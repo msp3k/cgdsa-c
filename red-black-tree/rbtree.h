@@ -124,7 +124,7 @@ typedef int (*rbtree_compare)(const void * left, const void * right);
  * int free_rbnode_data(void * key, void * value) {
  * 	free(key);
  * 	free(value);
- * 	return(1); // This is a simple function that assumes free() didn't fail
+ * 	return(1);
  * }
  * @endcode
  */
@@ -225,6 +225,18 @@ int rbtree_insert(rbtree_t * t, void * key, void * value);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL
+ *
+ * Example:
+ *
+ * @code
+ * rbnode_t * n = rbtree_find(t, (void *)&key);
+ * if (n == NULL) {
+ * 	printf("Not found\n");
+ * }
+ * else {
+ * 	printf("Found: key = %d, value = %d\n", *(int *)rbtree_key(n), *(int *)rbtree_value(n));
+ * }
+ * @endcode
  */
 rbnode_t * rbtree_find(rbtree_t * t, void * key);
 
@@ -233,6 +245,8 @@ rbnode_t * rbtree_find(rbtree_t * t, void * key);
  * Return value:
  * - Success: 1
  * - Failure: 0
+ *
+ * Example:
  *
  * @code
  * rbnode_t * n = rbtree_find(t, k);
@@ -248,6 +262,12 @@ rbnode_t * rbtree_find(rbtree_t * t, void * key);
 int rbtree_remove(rbtree_t * t, rbnode_t * n);
 
 /** Return the number of nodes in the tree.
+ *
+ * Example:
+ *
+ * @code
+ * size_t num_elements = rbtree_size(t);
+ * @endcode
  */
 size_t rbtree_size(rbtree_t * t);
 
@@ -276,6 +296,14 @@ rbnode_t * rbtree_apply(rbtree_t * t, rbtree_func func);
 /** Destroy a tree and free all nodes, keys, and values
  *
  * Return value: NULL
+ *
+ * Example:
+ *
+ * @code
+ * rbtree_t * t = rbtree_create(cmp, NULL);
+ * // ... stuff ...
+ * t = rbtree_destroy(t);
+ * @endcode
  */
 rbtree_t * rbtree_destroy(rbtree_t * t);
 
@@ -288,6 +316,12 @@ rbtree_t * rbtree_destroy(rbtree_t * t);
  * Notes: Be aware that cloning a tree merely copies the key and value
  * pointers.  It does not create copies of what they key and value pointers
  * point to.
+ *
+ * Example:
+ *
+ * @code
+ * rbtree_t * t2 = rbtree_clone(t);
+ * @endcode
  */
 rbtree_t * rbtree_clone(rbtree_t * t);
 
@@ -296,6 +330,17 @@ rbtree_t * rbtree_clone(rbtree_t * t);
  * Return value:
  * - Success: 1 -- Trees are identical
  * - Failure: 0 -- Trees differ
+ *
+ * Example:
+ *
+ * @code
+ * if (rbtrees_are_identical(t1, t2)) {
+ * 	printf("Identical\n");
+ * }
+ * else {
+ * 	printf("Differ\n");
+ * }
+ * @endcode
  */
 int rbtrees_are_identical(rbtree_t * t1, rbtree_t * t2);
 
@@ -304,16 +349,22 @@ int rbtrees_are_identical(rbtree_t * t1, rbtree_t * t2);
  * Return value:
  * - Success: 1
  * - Failure: 0
+ *
+ * TODO: Write an example for this
  */
 int rbtree_write_gv(rbtree_t * t, char * filename,
 	int (*write_node_key)(FILE * fout, void * key),
 	int (*write_node_value)(FILE * fout, void * value));
 
 /** Return the key from a node
+ *
+ * TODO: Write an example for this
  */
 void * rbtree_key(rbnode_t * n);
 
 /** Return the value from a node
+ *
+ * TODO: Write an example for this
  */
 void * rbtree_value(rbnode_t * n);
 
@@ -327,8 +378,12 @@ void * rbtree_value(rbnode_t * n);
  * different address than the pointer passed in.  Therefore proper usage
  * should be:
  * 
- *  n = rbtree_detach_node(t, n);
- *  if (n == NULL) { // Detach failed }
+ * @code
+ * n = rbtree_detach_node(t, n);
+ * if (n == NULL) {
+ * 	printf("Detach failed\n");
+ * }
+ * @endcode
  */
 rbnode_t * rbtree_detach_node(rbtree_t * t, rbnode_t * n);
 
@@ -342,8 +397,12 @@ rbnode_t * rbtree_detach_node(rbtree_t * t, rbnode_t * n);
  * different address than the pointer passed in.  Therefore proper usage
  * should be:
  *
- *  n = rbtree_attach_node(t, n);
- *  if (n == NULL) { // Attach failed }
+ * @code
+ * n = rbtree_attach_node(t, n);
+ * if (n == NULL) {
+ * 	printf("Attach failed\n");
+ * }
+ * @endcode
  *
  * Notes: Be aware that when inserting a node with a duplicate key, the
  * original node's key/value pair are removed and replaced with the new
@@ -358,6 +417,8 @@ rbnode_t * rbtree_attach_node(rbtree_t * t, rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_top(rbtree_t * t);
 
@@ -366,6 +427,8 @@ rbnode_t * rbtree_top(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The node has no left child
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_left(rbnode_t * n);
 
@@ -374,6 +437,8 @@ rbnode_t * rbtree_left(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The node has no right child
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_right(rbnode_t * n);
 
@@ -382,6 +447,8 @@ rbnode_t * rbtree_right(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The node has no parent
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_parent(rbnode_t * n);
 
@@ -392,6 +459,8 @@ rbnode_t * rbtree_parent(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_in_order_first(rbtree_t * t);
 
@@ -400,6 +469,8 @@ rbnode_t * rbtree_in_order_first(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_in_order_last(rbtree_t * t);
 
@@ -408,6 +479,8 @@ rbnode_t * rbtree_in_order_last(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no next node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_in_order_next(rbnode_t * n);
 
@@ -416,6 +489,8 @@ rbnode_t * rbtree_in_order_next(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no previous node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_in_order_prev(rbnode_t * n);
 
@@ -426,6 +501,8 @@ rbnode_t * rbtree_in_order_prev(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_pre_order_first(rbtree_t * t);
 
@@ -434,6 +511,8 @@ rbnode_t * rbtree_pre_order_first(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_pre_order_last(rbtree_t * t);
 
@@ -442,6 +521,8 @@ rbnode_t * rbtree_pre_order_last(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no next node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_pre_order_next(rbnode_t * n);
 
@@ -450,6 +531,8 @@ rbnode_t * rbtree_pre_order_next(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no previous node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_pre_order_prev(rbnode_t * n);
 
@@ -460,6 +543,8 @@ rbnode_t * rbtree_pre_order_prev(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_post_order_first(rbtree_t * t);
 
@@ -468,6 +553,8 @@ rbnode_t * rbtree_post_order_first(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_post_order_last(rbtree_t * t);
 
@@ -476,6 +563,8 @@ rbnode_t * rbtree_post_order_last(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no next node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_post_order_next(rbnode_t * n);
 
@@ -484,6 +573,8 @@ rbnode_t * rbtree_post_order_next(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no previous node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_post_order_prev(rbnode_t * n);
 
@@ -494,6 +585,8 @@ rbnode_t * rbtree_post_order_prev(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_level_order_first(rbtree_t * t);
 
@@ -502,6 +595,8 @@ rbnode_t * rbtree_level_order_first(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- The tree is empty
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_level_order_last(rbtree_t * t);
 
@@ -510,6 +605,8 @@ rbnode_t * rbtree_level_order_last(rbtree_t * t);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no next node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_level_order_next(rbnode_t * n);
 
@@ -518,6 +615,8 @@ rbnode_t * rbtree_level_order_next(rbnode_t * n);
  * Return value:
  * - Success: rbnode_t *
  * - Failure: NULL -- There is no previous node
+ *
+ * TODO: Write an example for this
  */
 rbnode_t * rbtree_level_order_prev(rbnode_t * n);
 
