@@ -7,3 +7,4 @@ docs
 memory-allocator/test-mem-pthread
 memory-allocator/test-mem
 strings/test-str
+io/test-io-ready
