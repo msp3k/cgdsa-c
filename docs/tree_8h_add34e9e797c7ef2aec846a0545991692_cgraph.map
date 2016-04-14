@@ -1,7 +1,0 @@
-<map id="tree_level_order_last" name="tree_level_order_last">
-<area shape="rect" id="node2" href="$tree_8c.html#a0575f65c147f42f59e9ff72de02a2f88" title="__trnode_t_depth" alt="" coords="208,5,331,32"/>
-<area shape="rect" id="node4" href="$tree_8c.html#ace0dadd60047e4630fae3c36fc0903fe" title="Given a tree, return the first node for reverse post&#45;order traversal. " alt="" coords="199,56,339,83"/>
-<area shape="rect" id="node5" href="$tree_8c.html#a110c0e476ce8a16add3dc8fed61323c3" title="Given a node, return the previous node via reverse post&#45;order traversal. " alt="" coords="197,107,341,133"/>
-<area shape="rect" id="node6" href="$tree_8c.html#a9a2203c1a4a10c92cae60d7b4cf7757b" title="Return the root node of a tree. " alt="" coords="235,157,304,184"/>
-<area shape="rect" id="node3" href="$tree_8c.html#a3e9d7255368e98ce64096261f4b89ef0" title="Return the parent node of a node. " alt="" coords="390,5,477,32"/>
-</map>

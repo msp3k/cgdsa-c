@@ -1,4 +1,0 @@
-<map id="dllist_attach_node" name="dllist_attach_node">
-<area shape="rect" id="node2" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="182,5,314,32"/>
-<area shape="rect" id="node3" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node) " alt="" coords="197,56,299,83"/>
-</map>

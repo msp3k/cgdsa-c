@@ -1,5 +1,0 @@
-<map id="tree_remove" name="tree_remove">
-<area shape="rect" id="node2" href="$tree_8c.html#ac88131aada7ad9cbf9b29604d158a3ce" title="Detach the given node from the tree. " alt="" coords="149,31,275,57"/>
-<area shape="rect" id="node3" href="$tree_8c.html#a2631fd1b210e9807db2564e197f93975" title="__tree_maximum_node" alt="" coords="323,5,480,32"/>
-<area shape="rect" id="node4" href="$tree_8c.html#a5e212039a8041037897fd6c067c3fa62" title="__tree_replace_node" alt="" coords="330,56,473,83"/>
-</map>

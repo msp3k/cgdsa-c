@@ -1,6 +1,0 @@
-<map id="tree_is_degenerate" name="tree_is_degenerate">
-<area shape="rect" id="node2" href="$tree_8c.html#a9e7ed018a252063a9817bf02bea42444" title="Return the maximum depth of the tree. " alt="" coords="187,5,301,32"/>
-<area shape="rect" id="node4" href="$tree_8c.html#a63395089d52bf9db2767cc7ff01c8892" title="Return the number of nodes in the tree. " alt="" coords="207,56,281,83"/>
-<area shape="rect" id="node5" href="$tree_8c.html#a9a2203c1a4a10c92cae60d7b4cf7757b" title="Return the root node of a tree. " alt="" coords="209,107,279,133"/>
-<area shape="rect" id="node3" href="$tree_8c.html#ab26b400d65b129a20a971dd069a7a9d9" title="__tree_max_depth" alt="" coords="350,5,479,32"/>
-</map>

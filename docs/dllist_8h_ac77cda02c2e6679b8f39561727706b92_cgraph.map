@@ -1,7 +1,0 @@
-<map id="dllist_insert" name="dllist_insert">
-<area shape="rect" id="node2" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="338,5,470,32"/>
-<area shape="rect" id="node3" href="$dllist_8c.html#ac909cd064d5ece6e4c4bc37e7ca58889" title="Return the first node in a list. " alt="" coords="167,43,246,69"/>
-<area shape="rect" id="node4" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node) " alt="" coords="353,81,455,108"/>
-<area shape="rect" id="node5" href="$dllist_8c.html#a0a42fd53a3bbbbaa9d048a7d2cd55c1b" title="Create a new node containing value and insert it before node. " alt="" coords="141,144,272,171"/>
-<area shape="rect" id="node6" href="$dllist_8c.html#aced0fb5e5823163494b7eb30d1dfd24e" title="__dllist_make_new_node" alt="" coords="320,144,488,171"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="dllist_destroy" name="dllist_destroy">
-<area shape="rect" id="node2" href="$dllist_8c.html#ac909cd064d5ece6e4c4bc37e7ca58889" title="Return the first node in a list. " alt="" coords="162,56,241,83"/>
-<area shape="rect" id="node4" href="$dllist_8c.html#a842e6eac69733860a75b96511e173036" title="Given a node from some list, return the sentinel (header node) " alt="" coords="315,93,416,120"/>
-<area shape="rect" id="node5" href="$dllist_8c.html#a8fb3c168aec3d0c1758b99bda881c225" title="Remove a node from a list. " alt="" coords="152,5,251,32"/>
-<area shape="rect" id="node6" href="$dllist_8c.html#ae29f205f942193553d1c882608cecf91" title="Return the number of nodes in the list. " alt="" coords="161,157,241,184"/>
-<area shape="rect" id="node3" href="$dllist_8c.html#a4a0af0fcd24935228c8c6a3ab7c7eacb" title="__dllist_is_sentinel" alt="" coords="299,31,431,57"/>
-</map>

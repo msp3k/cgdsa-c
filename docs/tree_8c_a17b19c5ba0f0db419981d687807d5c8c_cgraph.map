@@ -1,9 +1,0 @@
-<map id="__tree_clone_node" name="__tree_clone_node">
-<area shape="rect" id="node2" href="$tree_8c.html#aa8129049863e5cfaf8c540afcdad9a07" title="Create a new node with the given key/value pair, and insert it into the tree. " alt="" coords="184,31,267,57"/>
-<area shape="rect" id="node5" href="$tree_8c.html#a1373232808b6afe3de0ff36e99c82062" title="Return the key from a node. " alt="" coords="189,81,261,108"/>
-<area shape="rect" id="node6" href="$tree_8c.html#a037394df5886606b8237e8c51c2cc4e9" title="Return the left child of a node. " alt="" coords="191,132,260,159"/>
-<area shape="rect" id="node7" href="$tree_8c.html#a9f0bb79a3ea0b3a09e9fa82dfbcab72b" title="Return the right child of a node. " alt="" coords="187,183,263,209"/>
-<area shape="rect" id="node8" href="$tree_8c.html#a519df851e9e314a9ea3c52e3be8c6cda" title="Return the value from a node. " alt="" coords="184,233,267,260"/>
-<area shape="rect" id="node3" href="$tree_8c.html#a229ac4f2bf538b6f8666744730466f74" title="__tree_new_node" alt="" coords="315,5,439,32"/>
-<area shape="rect" id="node4" href="$tree_8c.html#ad27464757d664bf85e6a1a896fc80249" title="Attach a node to the tree. " alt="" coords="316,56,439,83"/>
-</map>

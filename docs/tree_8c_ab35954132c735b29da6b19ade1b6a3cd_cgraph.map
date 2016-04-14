@@ -1,8 +1,0 @@
-<map id="tree_clear" name="tree_clear">
-<area shape="rect" id="node2" href="$tree_8c.html#a1e3d0bf27b786fd49fc4d7f0f0602c36" title="Given a tree, return the first node for post&#45;order traversal. " alt="" coords="135,5,276,32"/>
-<area shape="rect" id="node3" href="$tree_8c.html#af527c791f374d8a2494c9b721727d14e" title="Given a node, return the next node via post&#45;order traversal. " alt="" coords="133,56,277,83"/>
-<area shape="rect" id="node4" href="$tree_8c.html#a43664420bbea74d0a2a92922f369bb1b" title="Given a tree and a node, remove the node from the tree. " alt="" coords="158,107,253,133"/>
-<area shape="rect" id="node5" href="$tree_8c.html#ac88131aada7ad9cbf9b29604d158a3ce" title="Detach the given node from the tree. " alt="" coords="325,107,451,133"/>
-<area shape="rect" id="node6" href="$tree_8c.html#a2631fd1b210e9807db2564e197f93975" title="__tree_maximum_node" alt="" coords="499,81,656,108"/>
-<area shape="rect" id="node7" href="$tree_8c.html#a5e212039a8041037897fd6c067c3fa62" title="__tree_replace_node" alt="" coords="506,132,649,159"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="test_in_order_traversal" name="test_in_order_traversal">
-<area shape="rect" id="node2" href="$tree_8c.html#a51ee341f10ee082e3f284fd8dd8671e1" title="Given a tree, return the first node for in&#45;order traversal. " alt="" coords="210,5,337,32"/>
-<area shape="rect" id="node3" href="$tree_8c.html#a5b0daa9081b857a9b33dd5f92fd90729" title="Given a tree, return the first node for reverse in&#45;order traversal. " alt="" coords="211,56,336,83"/>
-<area shape="rect" id="node4" href="$tree_8c.html#a0fcf60a4afae9c23eae7d52efacf61fc" title="Given a node, return the next node via in&#45;order traversal. " alt="" coords="209,107,338,133"/>
-<area shape="rect" id="node5" href="$tree_8c.html#a5328bc82425bd7e4bcb503b9a366d6a8" title="Given a node, return the previous node via reverse in&#45;order traversal. " alt="" coords="209,157,338,184"/>
-<area shape="rect" id="node6" href="$tree_8c.html#a1373232808b6afe3de0ff36e99c82062" title="Return the key from a node. " alt="" coords="237,208,309,235"/>
-<area shape="rect" id="node7" href="$tree_8c.html#a519df851e9e314a9ea3c52e3be8c6cda" title="Return the value from a node. " alt="" coords="232,259,315,285"/>
-</map>
