@@ -74,7 +74,7 @@ typedef int (*tree_func)(const void * key, void * value);
 //---[ Tree Functions ]------------------------------------------------------
 
 /** Create a new tree.  Compare is a pointer to a function used to compare void
- * * keys.  Compare cannot be NULL.  Free is a pointer to a function to call
+ * keys.  Compare cannot be NULL.  Free is a pointer to a function to call
  * when destroying nodes.  Free is responsible for properly releasing any
  * memory used for the key and value stored by the node.
  *
